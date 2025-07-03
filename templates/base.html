@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Atacado de Semijoias{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="{% block description %}Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.{% endblock %}">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_global.css">
+    <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_header.css">
+  </noscript>
+  
+  {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="{{ profundidade_relativa }}index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="{{ profundidade_relativa }}carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="{{ profundidade_relativa }}login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      {% for categoria, subitens in menu_estrutura %}
+        <li>
+          <div class="menu-item-av" data-menu="{{ categoria.lower() }}">{{ categoria }}<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="{{ categoria.lower() }}">
+            <li class="submenu-titulo">Ver tudo em {{ categoria }}</li>
+            {% for nome_subitem, arquivo_subitem in subitens %}
+              <li><a href="{{ profundidade_relativa }}{{ arquivo_subitem }}" class="submenu-link">{{ nome_subitem }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="{{ profundidade_relativa }}script_header.js" defer></script>
+
+  {% block extra_scripts %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Revisar Pedido: Conjuntos Delicados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="../estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="../estilo_global.css">
+    <link rel="stylesheet" href="../estilo_header.css">
+  </noscript>
+  
+  
+  <link rel="stylesheet" href="../estilo_revisao.css">
+
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="../index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="../carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="../login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="../braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="../brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="../brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="../brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="../brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="../brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="../brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="../brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="../colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="../conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="../conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="../pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="../pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="../tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Revisar Pedido<br><small class="subtitulo-revisao">Conjuntos Delicados</small></div>
+  
+  <div id="resumoPedido">
+    <div class="item-resumo-skeleton">
+      <div class="skeleton skeleton-img"></div>
+      <div class="item-info-skeleton">
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line-short"></div>
+      </div>
+    </div>
+    <div class="item-resumo-skeleton">
+      <div class="skeleton skeleton-img"></div>
+      <div class="item-info-skeleton">
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line-short"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="total-pecas-box">
+      <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  <div class="area-botoes">
+    <button id="adicionarCarrinho" class="botao-padrao botao-whatsapp botao-piscando">Adicionar ao Carrinho</button>
+    <button id="voltarAdicionarMais" class="botao-padrao botao-voltar" onclick="window.history.back();"></button>
+  </div>
+</main>
+<footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+</footer>
+<div class="img-modal-bg" id="imgModalBg">
+  <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+  </div>
+</div>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="../script_header.js" defer></script>
+
+  
+<script>
+  const NOME_CATALOGO_ATUAL = 'conjuntos_delicados';
+  const NOME_CAT_FORMATADO = 'conjuntos_delicados';
+  const TITULO_CATALOGO = 'Conjuntos Delicados';
+  const PROFUNDIDADE_RELATIVA = '../';
+</script>
+<script src="../script_revisao.js" defer></script>
+
+
+</body>
+</html>

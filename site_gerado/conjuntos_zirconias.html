@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Conjuntos Zirconias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Conjuntos Zirconias</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550200898_0bbe7193d9_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-01</div>
+      <div class="card-ref">CJP-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-01" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-01" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-01" 
+                 data-img="https://live.staticflickr.com/65535/54550200898_0bbe7193d9_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549967466_235b0e03ef_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-02</div>
+      <div class="card-ref">CJP-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-02" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-02" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-02" 
+                 data-img="https://live.staticflickr.com/65535/54549967466_235b0e03ef_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549967606_a0f0d98e2f_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-03</div>
+      <div class="card-ref">CJP-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-03" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-03" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-03" 
+                 data-img="https://live.staticflickr.com/65535/54549967606_a0f0d98e2f_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550147289_2ff5e94078_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-04</div>
+      <div class="card-ref">CJP-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-04" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-04" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-04" 
+                 data-img="https://live.staticflickr.com/65535/54550147289_2ff5e94078_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549967841_c13f30c840_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-05</div>
+      <div class="card-ref">CJP-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-05" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-05" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-05" 
+                 data-img="https://live.staticflickr.com/65535/54549967841_c13f30c840_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549089362_d812be46fb_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-06</div>
+      <div class="card-ref">CJP-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-06" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-06" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-06" 
+                 data-img="https://live.staticflickr.com/65535/54549089362_d812be46fb_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550306475_92c6176fbf_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-07</div>
+      <div class="card-ref">CJP-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-07" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-07" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-07" 
+                 data-img="https://live.staticflickr.com/65535/54550306475_92c6176fbf_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549968106_7fc8e909f0_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-08</div>
+      <div class="card-ref">CJP-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-08" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-08" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-08" 
+                 data-img="https://live.staticflickr.com/65535/54549968106_7fc8e909f0_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549968226_c77be84403_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-09</div>
+      <div class="card-ref">CJP-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-09" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-09" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-09" 
+                 data-img="https://live.staticflickr.com/65535/54549968226_c77be84403_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550306755_dc08d93f50_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-10</div>
+      <div class="card-ref">CJP-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-10" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-10" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-10" 
+                 data-img="https://live.staticflickr.com/65535/54550306755_dc08d93f50_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550147934_e57fa37f86_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-11</div>
+      <div class="card-ref">CJP-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-11" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-11" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-11" 
+                 data-img="https://live.staticflickr.com/65535/54550147934_e57fa37f86_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550202028_fb92b5e529_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-12</div>
+      <div class="card-ref">CJP-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-12" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-12" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-12" 
+                 data-img="https://live.staticflickr.com/65535/54550202028_fb92b5e529_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550148154_1a6ea2b87c_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-13</div>
+      <div class="card-ref">CJP-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-13" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-13" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-13" 
+                 data-img="https://live.staticflickr.com/65535/54550148154_1a6ea2b87c_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550148259_7fb9000fbb_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-14</div>
+      <div class="card-ref">CJP-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-14" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-14" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-14" 
+                 data-img="https://live.staticflickr.com/65535/54550148259_7fb9000fbb_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549968946_9f3febd25c_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-15</div>
+      <div class="card-ref">CJP-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-15" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-15" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-15" 
+                 data-img="https://live.staticflickr.com/65535/54549968946_9f3febd25c_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550148564_cd1d4da2e7_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-16</div>
+      <div class="card-ref">CJP-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-16" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-16" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-16" 
+                 data-img="https://live.staticflickr.com/65535/54550148564_cd1d4da2e7_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549969206_c1ae53fb4f_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-17</div>
+      <div class="card-ref">CJP-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-17" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-17" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-17" 
+                 data-img="https://live.staticflickr.com/65535/54549969206_c1ae53fb4f_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550202723_b08ceced05_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-18</div>
+      <div class="card-ref">CJP-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-18" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-18" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-18" 
+                 data-img="https://live.staticflickr.com/65535/54550202723_b08ceced05_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550307890_502860c3c3_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-19</div>
+      <div class="card-ref">CJP-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-19" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-19" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-19" 
+                 data-img="https://live.staticflickr.com/65535/54550307890_502860c3c3_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550308040_f33230d479_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-20</div>
+      <div class="card-ref">CJP-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-20" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-20" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-20" 
+                 data-img="https://live.staticflickr.com/65535/54550308040_f33230d479_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549091087_236a289869_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-21</div>
+      <div class="card-ref">CJP-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-21" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-21" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-21" 
+                 data-img="https://live.staticflickr.com/65535/54549091087_236a289869_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550308285_484d8f6e3c_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-22</div>
+      <div class="card-ref">CJP-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-22" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-22" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-22" 
+                 data-img="https://live.staticflickr.com/65535/54550308285_484d8f6e3c_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550203373_40afefd70f_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-23</div>
+      <div class="card-ref">CJP-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-23" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-23" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-23" 
+                 data-img="https://live.staticflickr.com/65535/54550203373_40afefd70f_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549091427_54f8619b5c_c.jpg" alt="Conjuntos Zircônias  em Semijoia - CJP-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Conjuntos Zircônias  em Semijoia - CJP-24</div>
+      <div class="card-ref">CJP-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_CJP-24" type="text" class="counter-value" value="0" 
+                 data-ref="CJP-24" 
+                 data-desc="Conjuntos Zircônias  em Semijoia - CJP-24" 
+                 data-img="https://live.staticflickr.com/65535/54549091427_54f8619b5c_c.jpg"
+                 aria-label="Quantidade para Conjuntos Zircônias  em Semijoia - CJP-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'conjuntos_zirconias';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Argolas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Argolas</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550246090_82b53490d9_c.jpg" alt="Brincos Argolas em Semijoia - BAG-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-01</div>
+      <div class="card-ref">BAG-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-01" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-01" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-01" 
+                 data-img="https://live.staticflickr.com/65535/54550246090_82b53490d9_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549028557_dcbd2b9c2e_c.jpg" alt="Brincos Argolas em Semijoia - BAG-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-02</div>
+      <div class="card-ref">BAG-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-02" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-02" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-02" 
+                 data-img="https://live.staticflickr.com/65535/54549028557_dcbd2b9c2e_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550246350_9e9625f1b1_c.jpg" alt="Brincos Argolas em Semijoia - BAG-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-03</div>
+      <div class="card-ref">BAG-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-03" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-03" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-03" 
+                 data-img="https://live.staticflickr.com/65535/54550246350_9e9625f1b1_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550246470_72c03b413b_c.jpg" alt="Brincos Argolas em Semijoia - BAG-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-04</div>
+      <div class="card-ref">BAG-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-04" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-04" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-04" 
+                 data-img="https://live.staticflickr.com/65535/54550246470_72c03b413b_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550139613_b078ca680c_c.jpg" alt="Brincos Argolas em Semijoia - BAG-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-05</div>
+      <div class="card-ref">BAG-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-05" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-05" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-05" 
+                 data-img="https://live.staticflickr.com/65535/54550139613_b078ca680c_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550087164_98fafd9a82_c.jpg" alt="Brincos Argolas em Semijoia - BAG-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-06</div>
+      <div class="card-ref">BAG-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-06" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-06" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-06" 
+                 data-img="https://live.staticflickr.com/65535/54550087164_98fafd9a82_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550139823_2b380357b5_c.jpg" alt="Brincos Argolas em Semijoia - BAG-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-07</div>
+      <div class="card-ref">BAG-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-07" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-07" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-07" 
+                 data-img="https://live.staticflickr.com/65535/54550139823_2b380357b5_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550087424_24ef98687b_c.jpg" alt="Brincos Argolas em Semijoia - BAG-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-08</div>
+      <div class="card-ref">BAG-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-08" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-08" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-08" 
+                 data-img="https://live.staticflickr.com/65535/54550087424_24ef98687b_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550087584_f16aeabe77_c.jpg" alt="Brincos Argolas em Semijoia - BAG-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-09</div>
+      <div class="card-ref">BAG-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-09" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-09" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-09" 
+                 data-img="https://live.staticflickr.com/65535/54550087584_f16aeabe77_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550087684_cc0fb1d8f2_c.jpg" alt="Brincos Argolas em Semijoia - BAG-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-10</div>
+      <div class="card-ref">BAG-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-10" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-10" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-10" 
+                 data-img="https://live.staticflickr.com/65535/54550087684_cc0fb1d8f2_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140448_ca0d44e950_c.jpg" alt="Brincos Argolas em Semijoia - BAG-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-11</div>
+      <div class="card-ref">BAG-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-11" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-11" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-11" 
+                 data-img="https://live.staticflickr.com/65535/54550140448_ca0d44e950_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549908061_f438580600_c.jpg" alt="Brincos Argolas em Semijoia - BAG-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-12</div>
+      <div class="card-ref">BAG-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-12" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-12" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-12" 
+                 data-img="https://live.staticflickr.com/65535/54549908061_f438580600_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550247640_70aa71913e_c.jpg" alt="Brincos Argolas em Semijoia - BAG-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-13</div>
+      <div class="card-ref">BAG-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-13" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-13" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-13" 
+                 data-img="https://live.staticflickr.com/65535/54550247640_70aa71913e_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549029852_a9fe044021_c.jpg" alt="Brincos Argolas em Semijoia - BAG-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-14</div>
+      <div class="card-ref">BAG-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-14" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-14" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-14" 
+                 data-img="https://live.staticflickr.com/65535/54549029852_a9fe044021_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550088464_eeb4f20f6a_c.jpg" alt="Brincos Argolas em Semijoia - BAG-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-15</div>
+      <div class="card-ref">BAG-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-15" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-15" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-15" 
+                 data-img="https://live.staticflickr.com/65535/54550088464_eeb4f20f6a_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549030067_42a2dddf6d_c.jpg" alt="Brincos Argolas em Semijoia - BAG-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-16</div>
+      <div class="card-ref">BAG-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-16" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-16" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-16" 
+                 data-img="https://live.staticflickr.com/65535/54549030067_42a2dddf6d_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549908671_9e1e30cec4_c.jpg" alt="Brincos Argolas em Semijoia - BAG-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-17</div>
+      <div class="card-ref">BAG-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-17" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-17" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-17" 
+                 data-img="https://live.staticflickr.com/65535/54549908671_9e1e30cec4_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549908786_33471b0d11_c.jpg" alt="Brincos Argolas em Semijoia - BAG-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-18</div>
+      <div class="card-ref">BAG-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-18" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-18" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-18" 
+                 data-img="https://live.staticflickr.com/65535/54549908786_33471b0d11_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549030502_1ff3789a3a_c.jpg" alt="Brincos Argolas em Semijoia - BAG-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-19</div>
+      <div class="card-ref">BAG-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-19" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-19" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-19" 
+                 data-img="https://live.staticflickr.com/65535/54549030502_1ff3789a3a_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549030632_5cc81b7738_c.jpg" alt="Brincos Argolas em Semijoia - BAG-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-20</div>
+      <div class="card-ref">BAG-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-20" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-20" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-20" 
+                 data-img="https://live.staticflickr.com/65535/54549030632_5cc81b7738_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549030782_9654ed9dec_c.jpg" alt="Brincos Argolas em Semijoia - BAG-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-21</div>
+      <div class="card-ref">BAG-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-21" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-21" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-21" 
+                 data-img="https://live.staticflickr.com/65535/54549030782_9654ed9dec_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550089559_336715c056_c.jpg" alt="Brincos Argolas em Semijoia - BAG-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-22</div>
+      <div class="card-ref">BAG-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-22" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-22" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-22" 
+                 data-img="https://live.staticflickr.com/65535/54550089559_336715c056_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550248995_f2d595a024_c.jpg" alt="Brincos Argolas em Semijoia - BAG-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-23</div>
+      <div class="card-ref">BAG-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-23" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-23" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-23" 
+                 data-img="https://live.staticflickr.com/65535/54550248995_f2d595a024_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550089779_e63dc60f0d_c.jpg" alt="Brincos Argolas em Semijoia - BAG-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-24</div>
+      <div class="card-ref">BAG-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-24" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-24" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-24" 
+                 data-img="https://live.staticflickr.com/65535/54550089779_e63dc60f0d_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549031332_9841890995_c.jpg" alt="Brincos Argolas em Semijoia - BAG-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-25</div>
+      <div class="card-ref">BAG-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-25" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-25" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-25" 
+                 data-img="https://live.staticflickr.com/65535/54549031332_9841890995_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550142793_78a8f27c5e_c.jpg" alt="Brincos Argolas em Semijoia - BAG-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-26</div>
+      <div class="card-ref">BAG-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-26" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-26" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-26" 
+                 data-img="https://live.staticflickr.com/65535/54550142793_78a8f27c5e_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549031662_d440e7714c_c.jpg" alt="Brincos Argolas em Semijoia - BAG-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-27</div>
+      <div class="card-ref">BAG-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-27" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-27" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-27" 
+                 data-img="https://live.staticflickr.com/65535/54549031662_d440e7714c_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549910226_d527192a85_c.jpg" alt="Brincos Argolas em Semijoia - BAG-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-28</div>
+      <div class="card-ref">BAG-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-28" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-28" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-28" 
+                 data-img="https://live.staticflickr.com/65535/54549910226_d527192a85_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550143328_9eeac06c6d_c.jpg" alt="Brincos Argolas em Semijoia - BAG-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-29</div>
+      <div class="card-ref">BAG-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-29" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-29" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-29" 
+                 data-img="https://live.staticflickr.com/65535/54550143328_9eeac06c6d_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550090684_3253cf0ae2_c.jpg" alt="Brincos Argolas em Semijoia - BAG-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-30</div>
+      <div class="card-ref">BAG-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-30" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-30" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-30" 
+                 data-img="https://live.staticflickr.com/65535/54550090684_3253cf0ae2_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549032232_ca9bcf73e1_c.jpg" alt="Brincos Argolas em Semijoia - BAG-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-31</div>
+      <div class="card-ref">BAG-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-31" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-31" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-31" 
+                 data-img="https://live.staticflickr.com/65535/54549032232_ca9bcf73e1_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549910871_b3e8436e94_c.jpg" alt="Brincos Argolas em Semijoia - BAG-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-32</div>
+      <div class="card-ref">BAG-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-32" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-32" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-32" 
+                 data-img="https://live.staticflickr.com/65535/54549910871_b3e8436e94_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549911071_db1331f2e3_c.jpg" alt="Brincos Argolas em Semijoia - BAG-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-33</div>
+      <div class="card-ref">BAG-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-33" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-33" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-33" 
+                 data-img="https://live.staticflickr.com/65535/54549911071_db1331f2e3_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549032612_ccc2e2a3b2_c.jpg" alt="Brincos Argolas em Semijoia - BAG-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-34</div>
+      <div class="card-ref">BAG-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-34" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-34" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-34" 
+                 data-img="https://live.staticflickr.com/65535/54549032612_ccc2e2a3b2_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550250695_2de9ea8071_c.jpg" alt="Brincos Argolas em Semijoia - BAG-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-35</div>
+      <div class="card-ref">BAG-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-35" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-35" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-35" 
+                 data-img="https://live.staticflickr.com/65535/54550250695_2de9ea8071_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550250850_f9c137614a_c.jpg" alt="Brincos Argolas em Semijoia - BAG-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-36</div>
+      <div class="card-ref">BAG-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-36" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-36" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-36" 
+                 data-img="https://live.staticflickr.com/65535/54550250850_f9c137614a_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549911626_736dec3e84_c.jpg" alt="Brincos Argolas em Semijoia - BAG-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-37</div>
+      <div class="card-ref">BAG-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-37" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-37" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-37" 
+                 data-img="https://live.staticflickr.com/65535/54549911626_736dec3e84_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550144698_34c56b9a56_c.jpg" alt="Brincos Argolas em Semijoia - BAG-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-38</div>
+      <div class="card-ref">BAG-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-38" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-38" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-38" 
+                 data-img="https://live.staticflickr.com/65535/54550144698_34c56b9a56_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549911941_e6f47c948b_c.jpg" alt="Brincos Argolas em Semijoia - BAG-39" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-39</div>
+      <div class="card-ref">BAG-39</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-39" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-39" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-39" 
+                 data-img="https://live.staticflickr.com/65535/54549911941_e6f47c948b_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-39">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549912271_c75bf053cf_c.jpg" alt="Brincos Argolas em Semijoia - BAG-40" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-40</div>
+      <div class="card-ref">BAG-40</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-40" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-40" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-40" 
+                 data-img="https://live.staticflickr.com/65535/54549912271_c75bf053cf_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-40">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550251700_468ab23ece_c.jpg" alt="Brincos Argolas em Semijoia - BAG-41" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-41</div>
+      <div class="card-ref">BAG-41</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-41" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-41" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-41" 
+                 data-img="https://live.staticflickr.com/65535/54550251700_468ab23ece_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-41">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550145468_10d9a6380f_c.jpg" alt="Brincos Argolas em Semijoia - BAG-42" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-42</div>
+      <div class="card-ref">BAG-42</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-42" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-42" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-42" 
+                 data-img="https://live.staticflickr.com/65535/54550145468_10d9a6380f_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-42">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550251985_c7826dcbc5_c.jpg" alt="Brincos Argolas em Semijoia - BAG-43" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-43</div>
+      <div class="card-ref">BAG-43</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-43" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-43" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-43" 
+                 data-img="https://live.staticflickr.com/65535/54550251985_c7826dcbc5_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-43">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550145728_0b7e70847c_c.jpg" alt="Brincos Argolas em Semijoia - BAG-44" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-44</div>
+      <div class="card-ref">BAG-44</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-44" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-44" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-44" 
+                 data-img="https://live.staticflickr.com/65535/54550145728_0b7e70847c_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-44">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550145828_00657091f7_c.jpg" alt="Brincos Argolas em Semijoia - BAG-45" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-45</div>
+      <div class="card-ref">BAG-45</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-45" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-45" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-45" 
+                 data-img="https://live.staticflickr.com/65535/54550145828_00657091f7_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-45">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550252390_154703f57a_c.jpg" alt="Brincos Argolas em Semijoia - BAG-46" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-46</div>
+      <div class="card-ref">BAG-46</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-46" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-46" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-46" 
+                 data-img="https://live.staticflickr.com/65535/54550252390_154703f57a_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-46">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549034522_6b1ab6d152_c.jpg" alt="Brincos Argolas em Semijoia - BAG-47" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-47</div>
+      <div class="card-ref">BAG-47</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-47" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-47" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-47" 
+                 data-img="https://live.staticflickr.com/65535/54549034522_6b1ab6d152_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-47">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550146193_5b191a7eca_c.jpg" alt="Brincos Argolas em Semijoia - BAG-48" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-48</div>
+      <div class="card-ref">BAG-48</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-48" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-48" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-48" 
+                 data-img="https://live.staticflickr.com/65535/54550146193_5b191a7eca_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-48">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549034832_950a75a147_c.jpg" alt="Brincos Argolas em Semijoia - BAG-49" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-49</div>
+      <div class="card-ref">BAG-49</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-49" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-49" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-49" 
+                 data-img="https://live.staticflickr.com/65535/54549034832_950a75a147_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-49">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549034947_5339af4f50_c.jpg" alt="Brincos Argolas em Semijoia - BAG-50" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-50</div>
+      <div class="card-ref">BAG-50</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-50" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-50" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-50" 
+                 data-img="https://live.staticflickr.com/65535/54549034947_5339af4f50_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-50">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550093624_71ba73df3a_c.jpg" alt="Brincos Argolas em Semijoia - BAG-51" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-51</div>
+      <div class="card-ref">BAG-51</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-51" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-51" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-51" 
+                 data-img="https://live.staticflickr.com/65535/54550093624_71ba73df3a_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-51">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549913681_500723a178_c.jpg" alt="Brincos Argolas em Semijoia - BAG-52" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-52</div>
+      <div class="card-ref">BAG-52</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-52" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-52" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-52" 
+                 data-img="https://live.staticflickr.com/65535/54549913681_500723a178_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-52">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550093914_b9e6ef7544_c.jpg" alt="Brincos Argolas em Semijoia - BAG-53" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-53</div>
+      <div class="card-ref">BAG-53</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-53" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-53" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-53" 
+                 data-img="https://live.staticflickr.com/65535/54550093914_b9e6ef7544_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-53">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550253430_a1b7790659_c.jpg" alt="Brincos Argolas em Semijoia - BAG-54" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-54</div>
+      <div class="card-ref">BAG-54</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-54" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-54" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-54" 
+                 data-img="https://live.staticflickr.com/65535/54550253430_a1b7790659_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-54">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549035552_ed0dc97cf6_c.jpg" alt="Brincos Argolas em Semijoia - BAG-55" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-55</div>
+      <div class="card-ref">BAG-55</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-55" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-55" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-55" 
+                 data-img="https://live.staticflickr.com/65535/54549035552_ed0dc97cf6_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-55">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549914106_aba236f2ef_c.jpg" alt="Brincos Argolas em Semijoia - BAG-56" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-56</div>
+      <div class="card-ref">BAG-56</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-56" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-56" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-56" 
+                 data-img="https://live.staticflickr.com/65535/54549914106_aba236f2ef_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-56">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550147328_cafce4cde4_c.jpg" alt="Brincos Argolas em Semijoia - BAG-57" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-57</div>
+      <div class="card-ref">BAG-57</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-57" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-57" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-57" 
+                 data-img="https://live.staticflickr.com/65535/54550147328_cafce4cde4_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-57">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549035892_e47413f94e_c.jpg" alt="Brincos Argolas em Semijoia - BAG-58" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-58</div>
+      <div class="card-ref">BAG-58</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-58" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-58" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-58" 
+                 data-img="https://live.staticflickr.com/65535/54549035892_e47413f94e_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-58">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549914421_7d7012ee36_c.jpg" alt="Brincos Argolas em Semijoia - BAG-59" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Argolas em Semijoia - BAG-59</div>
+      <div class="card-ref">BAG-59</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BAG-59" type="text" class="counter-value" value="0" 
+                 data-ref="BAG-59" 
+                 data-desc="Brincos Argolas em Semijoia - BAG-59" 
+                 data-img="https://live.staticflickr.com/65535/54549914421_7d7012ee36_c.jpg"
+                 aria-label="Quantidade para Brincos Argolas em Semijoia - BAG-59">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_argolas';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

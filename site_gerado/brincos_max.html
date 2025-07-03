@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Max</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Max</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550131854_0761bdc657_c.jpg" alt="Brincos Max em Semijoia - BMX-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-01</div>
+      <div class="card-ref">BMX-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-01" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-01" 
+                 data-desc="Brincos Max em Semijoia - BMX-01" 
+                 data-img="https://live.staticflickr.com/65535/54550131854_0761bdc657_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549952631_64a6b439f8_c.jpg" alt="Brincos Max em Semijoia - BMX-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-02</div>
+      <div class="card-ref">BMX-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-02" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-02" 
+                 data-desc="Brincos Max em Semijoia - BMX-02" 
+                 data-img="https://live.staticflickr.com/65535/54549952631_64a6b439f8_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549952841_6facd68845_c.jpg" alt="Brincos Max em Semijoia - BMX-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-03</div>
+      <div class="card-ref">BMX-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-03" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-03" 
+                 data-desc="Brincos Max em Semijoia - BMX-03" 
+                 data-img="https://live.staticflickr.com/65535/54549952841_6facd68845_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549074402_5219059a0c_c.jpg" alt="Brincos Max em Semijoia - BMX-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-04</div>
+      <div class="card-ref">BMX-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-04" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-04" 
+                 data-desc="Brincos Max em Semijoia - BMX-04" 
+                 data-img="https://live.staticflickr.com/65535/54549074402_5219059a0c_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550186843_04bf922e94_c.jpg" alt="Brincos Max em Semijoia - BMX-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-05</div>
+      <div class="card-ref">BMX-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-05" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-05" 
+                 data-desc="Brincos Max em Semijoia - BMX-05" 
+                 data-img="https://live.staticflickr.com/65535/54550186843_04bf922e94_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549953251_44ecce46e9_c.jpg" alt="Brincos Max em Semijoia - BMX-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-06</div>
+      <div class="card-ref">BMX-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-06" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-06" 
+                 data-desc="Brincos Max em Semijoia - BMX-06" 
+                 data-img="https://live.staticflickr.com/65535/54549953251_44ecce46e9_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550292125_f2225bfc87_c.jpg" alt="Brincos Max em Semijoia - BMX-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-07</div>
+      <div class="card-ref">BMX-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-07" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-07" 
+                 data-desc="Brincos Max em Semijoia - BMX-07" 
+                 data-img="https://live.staticflickr.com/65535/54550292125_f2225bfc87_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550292255_43f1c83ddf_c.jpg" alt="Brincos Max em Semijoia - BMX-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-08</div>
+      <div class="card-ref">BMX-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-08" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-08" 
+                 data-desc="Brincos Max em Semijoia - BMX-08" 
+                 data-img="https://live.staticflickr.com/65535/54550292255_43f1c83ddf_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550132904_1915a46194_c.jpg" alt="Brincos Max em Semijoia - BMX-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-09</div>
+      <div class="card-ref">BMX-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-09" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-09" 
+                 data-desc="Brincos Max em Semijoia - BMX-09" 
+                 data-img="https://live.staticflickr.com/65535/54550132904_1915a46194_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549075097_a9d251ea26_c.jpg" alt="Brincos Max em Semijoia - BMX-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-10</div>
+      <div class="card-ref">BMX-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-10" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-10" 
+                 data-desc="Brincos Max em Semijoia - BMX-10" 
+                 data-img="https://live.staticflickr.com/65535/54549075097_a9d251ea26_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549075182_0e9545bae7_c.jpg" alt="Brincos Max em Semijoia - BMX-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-11</div>
+      <div class="card-ref">BMX-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-11" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-11" 
+                 data-desc="Brincos Max em Semijoia - BMX-11" 
+                 data-img="https://live.staticflickr.com/65535/54549075182_0e9545bae7_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549953721_cd5d3a3b61_c.jpg" alt="Brincos Max em Semijoia - BMX-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-12</div>
+      <div class="card-ref">BMX-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-12" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-12" 
+                 data-desc="Brincos Max em Semijoia - BMX-12" 
+                 data-img="https://live.staticflickr.com/65535/54549953721_cd5d3a3b61_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549953791_92e44ff001_c.jpg" alt="Brincos Max em Semijoia - BMX-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-13</div>
+      <div class="card-ref">BMX-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-13" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-13" 
+                 data-desc="Brincos Max em Semijoia - BMX-13" 
+                 data-img="https://live.staticflickr.com/65535/54549953791_92e44ff001_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549075567_daae29ae31_c.jpg" alt="Brincos Max em Semijoia - BMX-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-14</div>
+      <div class="card-ref">BMX-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-14" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-14" 
+                 data-desc="Brincos Max em Semijoia - BMX-14" 
+                 data-img="https://live.staticflickr.com/65535/54549075567_daae29ae31_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550133639_0389bef967_c.jpg" alt="Brincos Max em Semijoia - BMX-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-15</div>
+      <div class="card-ref">BMX-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-15" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-15" 
+                 data-desc="Brincos Max em Semijoia - BMX-15" 
+                 data-img="https://live.staticflickr.com/65535/54550133639_0389bef967_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550187933_a8289a3bcc_c.jpg" alt="Brincos Max em Semijoia - BMX-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-16</div>
+      <div class="card-ref">BMX-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-16" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-16" 
+                 data-desc="Brincos Max em Semijoia - BMX-16" 
+                 data-img="https://live.staticflickr.com/65535/54550187933_a8289a3bcc_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549075897_bd532e9b41_c.jpg" alt="Brincos Max em Semijoia - BMX-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-17</div>
+      <div class="card-ref">BMX-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-17" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-17" 
+                 data-desc="Brincos Max em Semijoia - BMX-17" 
+                 data-img="https://live.staticflickr.com/65535/54549075897_bd532e9b41_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549075997_ab64e98920_c.jpg" alt="Brincos Max em Semijoia - BMX-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-18</div>
+      <div class="card-ref">BMX-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-18" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-18" 
+                 data-desc="Brincos Max em Semijoia - BMX-18" 
+                 data-img="https://live.staticflickr.com/65535/54549075997_ab64e98920_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549954561_4a7dec5863_c.jpg" alt="Brincos Max em Semijoia - BMX-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-19</div>
+      <div class="card-ref">BMX-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-19" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-19" 
+                 data-desc="Brincos Max em Semijoia - BMX-19" 
+                 data-img="https://live.staticflickr.com/65535/54549954561_4a7dec5863_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550188468_8305fee2ef_c.jpg" alt="Brincos Max em Semijoia - BMX-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-20</div>
+      <div class="card-ref">BMX-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-20" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-20" 
+                 data-desc="Brincos Max em Semijoia - BMX-20" 
+                 data-img="https://live.staticflickr.com/65535/54550188468_8305fee2ef_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549954811_5b8dd5ecd0_c.jpg" alt="Brincos Max em Semijoia - BMX-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-21</div>
+      <div class="card-ref">BMX-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-21" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-21" 
+                 data-desc="Brincos Max em Semijoia - BMX-21" 
+                 data-img="https://live.staticflickr.com/65535/54549954811_5b8dd5ecd0_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550134549_c725148833_c.jpg" alt="Brincos Max em Semijoia - BMX-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-22</div>
+      <div class="card-ref">BMX-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-22" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-22" 
+                 data-desc="Brincos Max em Semijoia - BMX-22" 
+                 data-img="https://live.staticflickr.com/65535/54550134549_c725148833_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549955046_cedeef784f_c.jpg" alt="Brincos Max em Semijoia - BMX-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-23</div>
+      <div class="card-ref">BMX-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-23" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-23" 
+                 data-desc="Brincos Max em Semijoia - BMX-23" 
+                 data-img="https://live.staticflickr.com/65535/54549955046_cedeef784f_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550294120_08345886cd_c.jpg" alt="Brincos Max em Semijoia - BMX-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-24</div>
+      <div class="card-ref">BMX-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-24" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-24" 
+                 data-desc="Brincos Max em Semijoia - BMX-24" 
+                 data-img="https://live.staticflickr.com/65535/54550294120_08345886cd_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549076817_2c47a9a4eb_c.jpg" alt="Brincos Max em Semijoia - BMX-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-25</div>
+      <div class="card-ref">BMX-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-25" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-25" 
+                 data-desc="Brincos Max em Semijoia - BMX-25" 
+                 data-img="https://live.staticflickr.com/65535/54549076817_2c47a9a4eb_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550294335_acc378ec41_c.jpg" alt="Brincos Max em Semijoia - BMX-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-26</div>
+      <div class="card-ref">BMX-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-26" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-26" 
+                 data-desc="Brincos Max em Semijoia - BMX-26" 
+                 data-img="https://live.staticflickr.com/65535/54550294335_acc378ec41_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550189383_85977e6265_c.jpg" alt="Brincos Max em Semijoia - BMX-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-27</div>
+      <div class="card-ref">BMX-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-27" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-27" 
+                 data-desc="Brincos Max em Semijoia - BMX-27" 
+                 data-img="https://live.staticflickr.com/65535/54550189383_85977e6265_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550294560_57c44e1e1e_c.jpg" alt="Brincos Max em Semijoia - BMX-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-28</div>
+      <div class="card-ref">BMX-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-28" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-28" 
+                 data-desc="Brincos Max em Semijoia - BMX-28" 
+                 data-img="https://live.staticflickr.com/65535/54550294560_57c44e1e1e_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549077297_b13f7c9cf9_c.jpg" alt="Brincos Max em Semijoia - BMX-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-29</div>
+      <div class="card-ref">BMX-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-29" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-29" 
+                 data-desc="Brincos Max em Semijoia - BMX-29" 
+                 data-img="https://live.staticflickr.com/65535/54549077297_b13f7c9cf9_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549955911_6e56b0f3a0_c.jpg" alt="Brincos Max em Semijoia - BMX-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-30</div>
+      <div class="card-ref">BMX-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-30" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-30" 
+                 data-desc="Brincos Max em Semijoia - BMX-30" 
+                 data-img="https://live.staticflickr.com/65535/54549955911_6e56b0f3a0_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550189898_a3f55d2129_c.jpg" alt="Brincos Max em Semijoia - BMX-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-31</div>
+      <div class="card-ref">BMX-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-31" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-31" 
+                 data-desc="Brincos Max em Semijoia - BMX-31" 
+                 data-img="https://live.staticflickr.com/65535/54550189898_a3f55d2129_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549956166_11942cbb3c_c.jpg" alt="Brincos Max em Semijoia - BMX-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-32</div>
+      <div class="card-ref">BMX-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-32" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-32" 
+                 data-desc="Brincos Max em Semijoia - BMX-32" 
+                 data-img="https://live.staticflickr.com/65535/54549956166_11942cbb3c_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550135844_fa03fbc634_c.jpg" alt="Brincos Max em Semijoia - BMX-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-33</div>
+      <div class="card-ref">BMX-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-33" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-33" 
+                 data-desc="Brincos Max em Semijoia - BMX-33" 
+                 data-img="https://live.staticflickr.com/65535/54550135844_fa03fbc634_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550295245_e6ffedf6e8_c.jpg" alt="Brincos Max em Semijoia - BMX-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-34</div>
+      <div class="card-ref">BMX-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-34" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-34" 
+                 data-desc="Brincos Max em Semijoia - BMX-34" 
+                 data-img="https://live.staticflickr.com/65535/54550295245_e6ffedf6e8_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550295365_2955144883_c.jpg" alt="Brincos Max em Semijoia - BMX-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-35</div>
+      <div class="card-ref">BMX-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-35" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-35" 
+                 data-desc="Brincos Max em Semijoia - BMX-35" 
+                 data-img="https://live.staticflickr.com/65535/54550295365_2955144883_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549078152_a8e2ace482_c.jpg" alt="Brincos Max em Semijoia - BMX-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-36</div>
+      <div class="card-ref">BMX-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-36" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-36" 
+                 data-desc="Brincos Max em Semijoia - BMX-36" 
+                 data-img="https://live.staticflickr.com/65535/54549078152_a8e2ace482_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549078352_94238eae4c_c.jpg" alt="Brincos Max em Semijoia - BMX-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-37</div>
+      <div class="card-ref">BMX-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-37" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-37" 
+                 data-desc="Brincos Max em Semijoia - BMX-37" 
+                 data-img="https://live.staticflickr.com/65535/54549078352_94238eae4c_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550190808_06149729db_c.jpg" alt="Brincos Max em Semijoia - BMX-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-38</div>
+      <div class="card-ref">BMX-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-38" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-38" 
+                 data-desc="Brincos Max em Semijoia - BMX-38" 
+                 data-img="https://live.staticflickr.com/65535/54550190808_06149729db_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550295945_20c049c14d_c.jpg" alt="Brincos Max em Semijoia - BMX-39" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-39</div>
+      <div class="card-ref">BMX-39</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-39" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-39" 
+                 data-desc="Brincos Max em Semijoia - BMX-39" 
+                 data-img="https://live.staticflickr.com/65535/54550295945_20c049c14d_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-39">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549957306_1b8066ebc6_c.jpg" alt="Brincos Max em Semijoia - BMX-40" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-40</div>
+      <div class="card-ref">BMX-40</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-40" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-40" 
+                 data-desc="Brincos Max em Semijoia - BMX-40" 
+                 data-img="https://live.staticflickr.com/65535/54549957306_1b8066ebc6_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-40">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550137094_45d52e92db_c.jpg" alt="Brincos Max em Semijoia - BMX-41" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-41</div>
+      <div class="card-ref">BMX-41</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-41" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-41" 
+                 data-desc="Brincos Max em Semijoia - BMX-41" 
+                 data-img="https://live.staticflickr.com/65535/54550137094_45d52e92db_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-41">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550191433_3aa5a018df_c.jpg" alt="Brincos Max em Semijoia - BMX-42" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-42</div>
+      <div class="card-ref">BMX-42</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-42" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-42" 
+                 data-desc="Brincos Max em Semijoia - BMX-42" 
+                 data-img="https://live.staticflickr.com/65535/54550191433_3aa5a018df_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-42">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550191588_5638b4c87d_c.jpg" alt="Brincos Max em Semijoia - BMX-43" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-43</div>
+      <div class="card-ref">BMX-43</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-43" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-43" 
+                 data-desc="Brincos Max em Semijoia - BMX-43" 
+                 data-img="https://live.staticflickr.com/65535/54550191588_5638b4c87d_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-43">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549079487_a1e49847f7_c.jpg" alt="Brincos Max em Semijoia - BMX-44" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-44</div>
+      <div class="card-ref">BMX-44</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-44" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-44" 
+                 data-desc="Brincos Max em Semijoia - BMX-44" 
+                 data-img="https://live.staticflickr.com/65535/54549079487_a1e49847f7_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-44">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549079612_5bfd81491f_c.jpg" alt="Brincos Max em Semijoia - BMX-45" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-45</div>
+      <div class="card-ref">BMX-45</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-45" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-45" 
+                 data-desc="Brincos Max em Semijoia - BMX-45" 
+                 data-img="https://live.staticflickr.com/65535/54549079612_5bfd81491f_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-45">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550137769_3fa22536c4_c.jpg" alt="Brincos Max em Semijoia - BMX-46" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-46</div>
+      <div class="card-ref">BMX-46</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-46" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-46" 
+                 data-desc="Brincos Max em Semijoia - BMX-46" 
+                 data-img="https://live.staticflickr.com/65535/54550137769_3fa22536c4_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-46">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549079902_fb21bf45ca_c.jpg" alt="Brincos Max em Semijoia - BMX-47" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-47</div>
+      <div class="card-ref">BMX-47</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-47" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-47" 
+                 data-desc="Brincos Max em Semijoia - BMX-47" 
+                 data-img="https://live.staticflickr.com/65535/54549079902_fb21bf45ca_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-47">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550192188_92cfea123b_c.jpg" alt="Brincos Max em Semijoia - BMX-48" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-48</div>
+      <div class="card-ref">BMX-48</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-48" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-48" 
+                 data-desc="Brincos Max em Semijoia - BMX-48" 
+                 data-img="https://live.staticflickr.com/65535/54550192188_92cfea123b_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-48">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550138154_40f915a175_c.jpg" alt="Brincos Max em Semijoia - BMX-49" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-49</div>
+      <div class="card-ref">BMX-49</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-49" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-49" 
+                 data-desc="Brincos Max em Semijoia - BMX-49" 
+                 data-img="https://live.staticflickr.com/65535/54550138154_40f915a175_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-49">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550297410_34c774207d_c.jpg" alt="Brincos Max em Semijoia - BMX-50" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-50</div>
+      <div class="card-ref">BMX-50</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-50" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-50" 
+                 data-desc="Brincos Max em Semijoia - BMX-50" 
+                 data-img="https://live.staticflickr.com/65535/54550297410_34c774207d_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-50">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550138379_2ffd1c2a9e_c.jpg" alt="Brincos Max em Semijoia - BMX-51" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-51</div>
+      <div class="card-ref">BMX-51</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-51" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-51" 
+                 data-desc="Brincos Max em Semijoia - BMX-51" 
+                 data-img="https://live.staticflickr.com/65535/54550138379_2ffd1c2a9e_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-51">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549080532_500b6a7af3_c.jpg" alt="Brincos Max em Semijoia - BMX-52" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-52</div>
+      <div class="card-ref">BMX-52</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-52" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-52" 
+                 data-desc="Brincos Max em Semijoia - BMX-52" 
+                 data-img="https://live.staticflickr.com/65535/54549080532_500b6a7af3_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-52">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550297715_775b8203a6_c.jpg" alt="Brincos Max em Semijoia - BMX-53" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-53</div>
+      <div class="card-ref">BMX-53</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-53" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-53" 
+                 data-desc="Brincos Max em Semijoia - BMX-53" 
+                 data-img="https://live.staticflickr.com/65535/54550297715_775b8203a6_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-53">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549080807_4d0410931d_c.jpg" alt="Brincos Max em Semijoia - BMX-54" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-54</div>
+      <div class="card-ref">BMX-54</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-54" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-54" 
+                 data-desc="Brincos Max em Semijoia - BMX-54" 
+                 data-img="https://live.staticflickr.com/65535/54549080807_4d0410931d_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-54">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550193038_321bb1a8e7_c.jpg" alt="Brincos Max em Semijoia - BMX-55" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-55</div>
+      <div class="card-ref">BMX-55</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-55" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-55" 
+                 data-desc="Brincos Max em Semijoia - BMX-55" 
+                 data-img="https://live.staticflickr.com/65535/54550193038_321bb1a8e7_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-55">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549959396_2523a6b853_c.jpg" alt="Brincos Max em Semijoia - BMX-56" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-56</div>
+      <div class="card-ref">BMX-56</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-56" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-56" 
+                 data-desc="Brincos Max em Semijoia - BMX-56" 
+                 data-img="https://live.staticflickr.com/65535/54549959396_2523a6b853_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-56">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549959491_e8c8920cb5_c.jpg" alt="Brincos Max em Semijoia - BMX-57" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-57</div>
+      <div class="card-ref">BMX-57</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-57" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-57" 
+                 data-desc="Brincos Max em Semijoia - BMX-57" 
+                 data-img="https://live.staticflickr.com/65535/54549959491_e8c8920cb5_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-57">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549081262_f74afaf265_c.jpg" alt="Brincos Max em Semijoia - BMX-58" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-58</div>
+      <div class="card-ref">BMX-58</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-58" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-58" 
+                 data-desc="Brincos Max em Semijoia - BMX-58" 
+                 data-img="https://live.staticflickr.com/65535/54549081262_f74afaf265_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-58">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549081347_e76c4665bf_c.jpg" alt="Brincos Max em Semijoia - BMX-59" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-59</div>
+      <div class="card-ref">BMX-59</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-59" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-59" 
+                 data-desc="Brincos Max em Semijoia - BMX-59" 
+                 data-img="https://live.staticflickr.com/65535/54549081347_e76c4665bf_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-59">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550139389_dda628b0c0_c.jpg" alt="Brincos Max em Semijoia - BMX-60" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-60</div>
+      <div class="card-ref">BMX-60</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-60" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-60" 
+                 data-desc="Brincos Max em Semijoia - BMX-60" 
+                 data-img="https://live.staticflickr.com/65535/54550139389_dda628b0c0_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-60">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550298685_0a41d26fef_c.jpg" alt="Brincos Max em Semijoia - BMX-61" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-61</div>
+      <div class="card-ref">BMX-61</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-61" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-61" 
+                 data-desc="Brincos Max em Semijoia - BMX-61" 
+                 data-img="https://live.staticflickr.com/65535/54550298685_0a41d26fef_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-61">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550139764_51dd18caf4_c.jpg" alt="Brincos Max em Semijoia - BMX-62" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-62</div>
+      <div class="card-ref">BMX-62</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-62" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-62" 
+                 data-desc="Brincos Max em Semijoia - BMX-62" 
+                 data-img="https://live.staticflickr.com/65535/54550139764_51dd18caf4_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-62">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549081942_8bb8961ae3_c.jpg" alt="Brincos Max em Semijoia - BMX-63" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-63</div>
+      <div class="card-ref">BMX-63</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-63" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-63" 
+                 data-desc="Brincos Max em Semijoia - BMX-63" 
+                 data-img="https://live.staticflickr.com/65535/54549081942_8bb8961ae3_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-63">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140004_ea6f3cccff_c.jpg" alt="Brincos Max em Semijoia - BMX-64" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-64</div>
+      <div class="card-ref">BMX-64</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-64" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-64" 
+                 data-desc="Brincos Max em Semijoia - BMX-64" 
+                 data-img="https://live.staticflickr.com/65535/54550140004_ea6f3cccff_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-64">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550299135_a75d25342a_c.jpg" alt="Brincos Max em Semijoia - BMX-65" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-65</div>
+      <div class="card-ref">BMX-65</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-65" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-65" 
+                 data-desc="Brincos Max em Semijoia - BMX-65" 
+                 data-img="https://live.staticflickr.com/65535/54550299135_a75d25342a_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-65">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140204_ab9ee8ee21_c.jpg" alt="Brincos Max em Semijoia - BMX-66" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-66</div>
+      <div class="card-ref">BMX-66</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-66" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-66" 
+                 data-desc="Brincos Max em Semijoia - BMX-66" 
+                 data-img="https://live.staticflickr.com/65535/54550140204_ab9ee8ee21_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-66">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550299345_450ff5606a_c.jpg" alt="Brincos Max em Semijoia - BMX-67" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-67</div>
+      <div class="card-ref">BMX-67</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-67" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-67" 
+                 data-desc="Brincos Max em Semijoia - BMX-67" 
+                 data-img="https://live.staticflickr.com/65535/54550299345_450ff5606a_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-67">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550299470_08ecd5c4a5_c.jpg" alt="Brincos Max em Semijoia - BMX-68" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-68</div>
+      <div class="card-ref">BMX-68</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-68" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-68" 
+                 data-desc="Brincos Max em Semijoia - BMX-68" 
+                 data-img="https://live.staticflickr.com/65535/54550299470_08ecd5c4a5_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-68">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140474_83cdaf9cdd_c.jpg" alt="Brincos Max em Semijoia - BMX-69" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Max em Semijoia - BMX-69</div>
+      <div class="card-ref">BMX-69</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMX-69" type="text" class="counter-value" value="0" 
+                 data-ref="BMX-69" 
+                 data-desc="Brincos Max em Semijoia - BMX-69" 
+                 data-img="https://live.staticflickr.com/65535/54550140474_83cdaf9cdd_c.jpg"
+                 aria-label="Quantidade para Brincos Max em Semijoia - BMX-69">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_max';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

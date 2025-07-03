@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Seu Pedido Final - Atacado de Semijoias{% endblock %}
+
+{% block extra_css %}
+  {# Reutilizamos os estilos da página do carrinho que estão no estilo_global.css #}
+  <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_carrinho.css">
+  <style>
+    /* Esconde os botões e outros elementos na hora da impressão */
+    @media print {
+      .area-botoes-final, header.topo-menu, footer, #voltarAoTopoBtn {
+        display: none !important;
+      }
+      main { 
+        margin-top: -50px; /* Compensa o espaço do header escondido */
+      }
+      body {
+        background: #fff; /* Fundo branco na impressão */
+      }
+      #areaPedidos, .bloco-catalogo {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<main>
+  <div class="titulo-carrinho">Resumo Final do Pedido</div>
+  <div id="areaPedidos">
+    {# O conteúdo do pedido será inserido aqui pelo script_pedido_final.js #}
+  </div>
+  <div class="total-geral" id="totalGeral"></div>
+  
+  <div class="area-botoes-final" id="areaBotoesFinal">
+    <button id="downloadPdfBtn" class="botao-padrao botao-dourado">Download/Imprimir (PDF)</button>
+    <button id="partilharBtn" class="botao-padrao botao-whatsapp">Partilhar Pedido</button>
+  </div>
+</main>
+<footer>
+  <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+</footer>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ profundidade_relativa }}script_pedido_final.js" defer></script>
+{% endblock %}

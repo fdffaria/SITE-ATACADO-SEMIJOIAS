@@ -1,0 +1,133 @@
+/* ======================================================= */
+/* ESTILO DO HEADER ATUALIZADO COM LINK DE LOGOUT */
+/* ======================================================= */
+
+body {
+  margin: 0; padding: 0; background: #fff; font-family: Arial, sans-serif;
+  padding-top: 85px !important; 
+}
+
+a, a:hover, a:visited { text-decoration: none; }
+.topo-menu { width: 100%; box-sizing: border-box; background: #fff; display: flex; flex-direction: column; align-items: stretch; position: fixed; top: 0; left: 0; z-index: 1000; }
+
+.linha-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    min-height: 75px;
+    padding: 0 15px; 
+    box-sizing: border-box; 
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+.hamburger-btn { background: none; border: none; outline: none; display: flex; align-items: center; justify-content: center; cursor: pointer; width: 40px; height: 40px; z-index: 1002; padding: 0; margin: 0; }
+.hamburger-icon { width: 24px; height: 24px; display: flex; flex-direction: column; justify-content: space-around; }
+.hamburger-icon span { display: block; width: 24px; height: 3px; background: #494949; border-radius: 2px; }
+.buscar-icone { font-size: 28px; color: #494949; cursor: pointer; flex-shrink: 0; }
+.grupo-menu-central { display: flex; justify-content: center; align-items: stretch; flex-grow: 1; }
+.menu-item { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px 0 4px 0; position: relative; margin: 0 1vw; box-sizing: border-box; cursor: pointer; color: #b49758; }
+
+.menu-item.login .menu-text {
+    white-space: nowrap; 
+}
+
+/* ======================= BLOCO ADICIONADO ======================= */
+.login-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+}
+
+.logout-link-header {
+    font-size: 11px;
+    font-weight: bold;
+    color: #c9302c; /* Tom vermelho para a ação de sair */
+    text-decoration: underline;
+    margin-top: -4px;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.logout-link-header:hover {
+    color: #a94442;
+    background-color: #f2dede;
+}
+/* =============================================================== */
+
+.menu-item.produtos {
+  background: none;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  padding: 8px 0 4px 0;
+  margin: 0 1vw;
+}
+
+.menu-icon { 
+    font-size: 38px;
+    color: #b49758; 
+    margin-bottom: 3px; 
+}
+
+.menu-text { 
+    font-family: Arial, sans-serif; 
+    font-size: 13px;
+    color: #b49758; 
+    font-weight: bold; 
+    letter-spacing: 0.5px; 
+    text-transform: uppercase; 
+}
+.menu-item.carrinho { position: relative; }
+
+.menu-item.carrinho .carrinho-num {
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    font-size: 11px;
+    color: #fff;
+    background-color: #23b04a;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.menu-overlay { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(40,40,40,0.44); }
+.menu-lateral { position: fixed; top: 0; left: 0; z-index: 10000; width: 85vw; max-width: 320px; height: 100vh; background: #393939; box-shadow: 0 0 16px #0005; transform: translateX(-100%); transition: transform .28s ease-out; display: flex; flex-direction: column; }
+.menu-lateral.aberto { transform: translateX(0); }
+.menu-overlay.aberto { display: block; }
+.menu-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 15px; }
+.menu-top .close-btn { font-size: 28px; color: #b49758; cursor: pointer; background: none; border: none; outline: none; }
+.menu-top .login-area { color: #fff; font-size: 0.9em; display: flex; align-items: center; gap: 8px; }
+.login-area a { color: #fff; text-decoration: none; }
+.menu-list { margin: 0; padding: 0; list-style: none; overflow-y: auto; }
+.menu-item-av { cursor: pointer; padding: 15px 20px; font-size: 1.1em; color: #fff; border-bottom: 1px solid #444; display: flex; align-items: center; justify-content: space-between; text-transform: uppercase; user-select: none; }
+.menu-item-av .material-icons { transition: transform 0.2s; }
+.menu-item-av.ativo { background: #b49758; }
+.menu-item-av.ativo .material-icons { transform: rotate(180deg); }
+.submenu { display: none; background: #ece0c8; padding: 0; }
+.submenu.ativo { display: block; }
+.submenu-titulo { padding: 12px 20px 8px 20px; color: #333; font-weight: 700; font-size: 0.9em; text-transform: uppercase; }
+.submenu-link { 
+    display: block; 
+    padding: 12px 20px 12px 30px; 
+    color: #393939; 
+    text-decoration: none; 
+    border-top: 1px solid #e0d7c3;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.submenu-link:hover {
+    background-color: #dcd1b8;
+}
+
+@media (max-width: 360px) {
+  .menu-text { display: none; }
+  .menu-item { padding-top: 12px; }
+}

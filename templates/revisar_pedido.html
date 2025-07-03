@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Revisar Pedido: {{ titulo_catalogo }}{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_revisao.css">
+{% endblock %}
+
+{% block content %}
+<main>
+  <div class="titulo-catalogo">Revisar Pedido<br><small class="subtitulo-revisao">{{ titulo_catalogo }}</small></div>
+  
+  <div id="resumoPedido">
+    <div class="item-resumo-skeleton">
+      <div class="skeleton skeleton-img"></div>
+      <div class="item-info-skeleton">
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line-short"></div>
+      </div>
+    </div>
+    <div class="item-resumo-skeleton">
+      <div class="skeleton skeleton-img"></div>
+      <div class="item-info-skeleton">
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line-short"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="total-pecas-box">
+      <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  <div class="area-botoes">
+    <button id="adicionarCarrinho" class="botao-padrao botao-whatsapp botao-piscando">Adicionar ao Carrinho</button>
+    <button id="voltarAdicionarMais" class="botao-padrao botao-voltar" onclick="window.history.back();"></button>
+  </div>
+</main>
+<footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+</footer>
+<div class="img-modal-bg" id="imgModalBg">
+  <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+  </div>
+</div>
+{% endblock %}
+
+
+{% block extra_scripts %}
+<script>
+  const NOME_CATALOGO_ATUAL = '{{ nome_cat }}';
+  const NOME_CAT_FORMATADO = '{{ nome_cat_formatado }}';
+  const TITULO_CATALOGO = '{{ titulo_catalogo }}';
+  const PROFUNDIDADE_RELATIVA = '{{ profundidade_relativa }}';
+</script>
+<script src="{{ profundidade_relativa }}script_revisao.js" defer></script>
+{% endblock %}

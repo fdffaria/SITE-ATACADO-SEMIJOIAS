@@ -1,0 +1,79 @@
+/* Arquivo: estilo_revisao.css (VERSÃO COM BOTÃO DOURADO) */
+
+.page-wrapper { 
+    min-height: calc(100vh - 80px);
+    display: flex; 
+    flex-direction: column; 
+}
+
+main {
+    flex-grow: 1;
+}
+
+#resumoPedido { max-width: 710px; margin: 20px auto; padding: 10px; background: #fdfcfa; border-radius: 18px; box-shadow: 0 2px 12px rgba(201,163,58,0.1); }
+.item-resumo { display: flex; align-items: center; gap: 15px; padding: 12px; border-bottom: 1px solid #f0eada; }
+.item-resumo:last-child { border-bottom: none; }
+/* A propriedade 'position: relative' do item-img-container foi movida para o estilo_global.css */
+.item-img-container { width: 85px; height: 85px; flex-shrink: 0; }
+.item-img { width: 100%; height: 100%; border-radius: 8px; object-fit: cover; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.1); cursor: pointer; }
+.item-info { flex-grow: 1; text-align: left; }
+.item-desc { font-weight: 500; }
+.item-ref { font-weight: 700; color: #111; font-size: 0.9em; margin-bottom: 8px;}
+.area-botoes { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 30px auto; max-width: 450px; padding: 0 10px; }
+.botao-padrao:active { transform: translateY(1px); }
+
+/* --- ALTERAÇÃO AQUI --- */
+.botao-voltar { 
+  background: #b49758; /* Cor dourada padrão do site */
+}
+/* ---------------------- */
+
+.total-pecas-box { margin-bottom: 20px; }
+
+/* O ESTILO DO BOTÃO .btn-excluir-item FOI REMOVIDO DESTE FICHEIRO E MOVIDO PARA estilo_global.css */
+
+@keyframes pulse-bg {
+  0% { background-color: #f0f0f0; }
+  50% { background-color: #e0e0e0; }
+  100% { background-color: #f0f0f0; }
+}
+
+.item-resumo-skeleton {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border-bottom: 1px solid #f0eada;
+}
+.item-resumo-skeleton:last-child {
+  border-bottom: none;
+}
+
+.skeleton {
+  animation: pulse-bg 1.5s infinite ease-in-out;
+  border-radius: 4px;
+}
+
+.skeleton-img {
+  width: 85px;
+  height: 85px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.item-info-skeleton {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-line {
+  width: 90%;
+  height: 1em;
+}
+
+.skeleton-line-short {
+  width: 60%;
+  height: 1em;
+}

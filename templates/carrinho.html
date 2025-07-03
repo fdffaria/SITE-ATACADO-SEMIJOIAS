@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Resumo de Pedido - Atacado de Semijoias{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ profundidade_relativa }}estilo_carrinho.css">
+  <style>
+    .titulo-carrinho { text-align: center; font-size: clamp(1.6em, 5vw, 2.2em); font-weight: 800; letter-spacing: 0.5px; margin: 25px auto 20px auto; color: #C9A33A; max-width: 90vw; line-height: 1.2; }
+    #areaPedidos { max-width: 710px; margin: 20px auto; padding: 10px; background: #fdfcfa; border-radius: 18px; box-shadow: 0 2px 12px rgba(201,163,58,0.1); }
+    .bloco-catalogo { margin-bottom: 25px; border: 1px solid #f0eada; border-radius: 12px; padding: 15px; }
+    .catalogo-titulo { font-size: 1.2em; font-weight: bold; color: #333; border-bottom: 2px solid #b49758; padding-bottom: 8px; margin-bottom: 15px; }
+    .item-resumo { display: flex; align-items: center; gap: 15px; padding: 12px; border-bottom: 1px solid #f0eada; }
+    .item-img-container { position: relative; width: 65px; height: 65px; flex-shrink: 0; }
+    .item-img { width: 100%; height: 100%; border-radius: 8px; object-fit: cover; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.1); cursor: pointer; }
+    .item-info { flex-grow: 1; text-align: left; }
+    .item-desc { font-weight: 500; font-size: 0.95em; }
+    .item-ref { font-weight: 700; color: #111; font-size: 0.85em; }
+    .item-qtd { font-weight: 500; font-size: 0.9em; margin-top: 5px; }
+    .total-pecas-bloco { text-align: right; font-weight: bold; margin-top: 10px; font-size: 0.9em; }
+    .total-geral { text-align: center; font-size: 1.3em; font-weight: bold; margin: 30px auto; }
+    .area-botoes-final { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 30px auto; max-width: 450px; padding: 0 10px; }
+  </style>
+{% endblock %}
+
+{% block content %}
+<main>
+  <div class="titulo-carrinho">Resumo de Pedido</div>
+  <div id="areaPedidos"></div>
+  <div class="total-geral" id="totalGeral"></div>
+  
+  <div class="area-botoes-final" id="areaBotoesFinal" style="display: none;">
+    <button id="mostrarCatalogosBtn" class="botao-padrao botao-whatsapp botao-piscando">Mostrar outros Catálogos</button>
+    <button id="voltarCatalogoAnterior" class="botao-padrao botao-dourado botao-piscando-dourado" style="display: none;"></button>
+    <button id="enviarWhatsapp" class="botao-padrao botao-whatsapp botao-piscando">Enviar pedido pelo WhatsApp</button>
+    <button id="visualizarPedido" class="botao-padrao botao-dourado" style="display: none;">Visualizar/Imprimir Pedido</button>
+  </div>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+  
+  <div id="avisoRedirect" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 20000; justify-content: center; align-items: center;">
+    <div style="background-color: white; padding: 25px; border-radius: 12px; text-align: center; max-width: 90%; width: 320px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+      <h3 style="margin-top: 0; color: #C9A33A;">Aviso</h3>
+      <p id="avisoRedirectTexto" style="color: #333; line-height: 1.5;">Para continuar, você precisa de fazer o login. A redirecioná-lo...</p>
+    </div>
+  </div>
+
+  <div id="loadingOverlay" class="spinner-overlay">
+    <div class="spinner"></div>
+    <p class="spinner-text">A processar o seu pedido...</p>
+  </div>
+</main>
+<footer>
+  <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+</footer>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script>
+    const NUMERO_WHATSAPP = "{{ numero_whatsapp }}";
+  </script>
+  <script src="{{ profundidade_relativa }}script_carrinho.js" defer></script>
+{% endblock %}

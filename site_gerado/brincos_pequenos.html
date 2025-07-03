@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Pequenos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Pequenos</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140664_3de94d66cb_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-01" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-01" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550140664_3de94d66cb_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550194863_aef76d9c4d_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-02" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-02" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54550194863_aef76d9c4d_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549083047_faca06ab80_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-03" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-03" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54549083047_faca06ab80_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549961571_98d4bbcf77_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-04" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-04" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54549961571_98d4bbcf77_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141184_83b54b2ef7_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-05" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-05" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550141184_83b54b2ef7_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141289_55cd826cea_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-06" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-06" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54550141289_55cd826cea_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141374_f1985984d2_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-07" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-07" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54550141374_f1985984d2_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141469_e8af1dea99_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-08" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-08" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54550141469_e8af1dea99_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550300825_85098afce8_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-09" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-09" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550300825_85098afce8_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549083912_f8807a8c4b_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-10" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-10" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54549083912_f8807a8c4b_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141804_ee571f5a89_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-11" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-11" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54550141804_ee571f5a89_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549962541_e3a2628f11_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-12" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-12" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54549962541_e3a2628f11_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301405_15bffb625b_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-13" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-13" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550301405_15bffb625b_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550142284_e9f27d140b_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-14" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-14" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54550142284_e9f27d140b_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301630_d682c5e72c_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-15" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-15" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54550301630_d682c5e72c_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549084567_47c60e72c5_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-16" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-16" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54549084567_47c60e72c5_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301970_0afd91d13a_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-17" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-17" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550301970_0afd91d13a_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550142829_42cbf0305a_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-18" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-18" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54550142829_42cbf0305a_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550302155_2e6c92bf39_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-19" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-19" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54550302155_2e6c92bf39_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550197128_71e1fb0738_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-20" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-20" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54550197128_71e1fb0738_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549963836_706feaa599_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 10mm</div>
+      <div class="card-ref">BPD-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-21" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-21" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54549963836_706feaa599_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549085417_4fd813ce3d_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 8mm</div>
+      <div class="card-ref">BPD-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-22" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-22" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54549085417_4fd813ce3d_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549964001_a85ff2f6de_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 6mm</div>
+      <div class="card-ref">BPD-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-23" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-23" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54549964001_a85ff2f6de_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550197718_8b4f559e1f_c.jpg" alt="Brincos Pequenos em Semijoia - Ø 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - Ø 4mm</div>
+      <div class="card-ref">BPD-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-24" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-24" 
+                 data-desc="Brincos Pequenos em Semijoia - Ø 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54550197718_8b4f559e1f_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - Ø 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550303115_6d6c9d3254_c.jpg" alt="Brincos Pequenos em Semijoia - □ 10mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - □ 10mm</div>
+      <div class="card-ref">BPD-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-25" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-25" 
+                 data-desc="Brincos Pequenos em Semijoia - □ 10mm" 
+                 data-img="https://live.staticflickr.com/65535/54550303115_6d6c9d3254_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - □ 10mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550303270_ca5e4b1151_c.jpg" alt="Brincos Pequenos em Semijoia - □ 8mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - □ 8mm</div>
+      <div class="card-ref">BPD-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-26" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-26" 
+                 data-desc="Brincos Pequenos em Semijoia - □ 8mm" 
+                 data-img="https://live.staticflickr.com/65535/54550303270_ca5e4b1151_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - □ 8mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550144129_887c4f6150_c.jpg" alt="Brincos Pequenos em Semijoia - □ 6mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - □ 6mm</div>
+      <div class="card-ref">BPD-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-27" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-27" 
+                 data-desc="Brincos Pequenos em Semijoia - □ 6mm" 
+                 data-img="https://live.staticflickr.com/65535/54550144129_887c4f6150_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - □ 6mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550144234_666148bf2b_c.jpg" alt="Brincos Pequenos em Semijoia - □ 4mm" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - □ 4mm</div>
+      <div class="card-ref">BPD-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-28" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-28" 
+                 data-desc="Brincos Pequenos em Semijoia - □ 4mm" 
+                 data-img="https://live.staticflickr.com/65535/54550144234_666148bf2b_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - □ 4mm">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550303610_0bb2972f03_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-29</div>
+      <div class="card-ref">BPD-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-29" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-29" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-29" 
+                 data-img="https://live.staticflickr.com/65535/54550303610_0bb2972f03_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549965131_1c3fecfefd_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-30</div>
+      <div class="card-ref">BPD-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-30" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-30" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-30" 
+                 data-img="https://live.staticflickr.com/65535/54549965131_1c3fecfefd_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550303800_cc733e7155_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-31</div>
+      <div class="card-ref">BPD-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-31" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-31" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-31" 
+                 data-img="https://live.staticflickr.com/65535/54550303800_cc733e7155_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549965316_4d125bf893_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-32</div>
+      <div class="card-ref">BPD-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-32" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-32" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-32" 
+                 data-img="https://live.staticflickr.com/65535/54549965316_4d125bf893_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549965431_05784ac568_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-33</div>
+      <div class="card-ref">BPD-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-33" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-33" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-33" 
+                 data-img="https://live.staticflickr.com/65535/54549965431_05784ac568_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550304105_3bbd92278d_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-34</div>
+      <div class="card-ref">BPD-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-34" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-34" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-34" 
+                 data-img="https://live.staticflickr.com/65535/54550304105_3bbd92278d_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549087117_c550c59c53_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-35</div>
+      <div class="card-ref">BPD-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-35" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-35" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-35" 
+                 data-img="https://live.staticflickr.com/65535/54549087117_c550c59c53_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549087207_646dbf5890_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-36</div>
+      <div class="card-ref">BPD-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-36" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-36" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-36" 
+                 data-img="https://live.staticflickr.com/65535/54549087207_646dbf5890_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549087347_489091cdeb_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-37</div>
+      <div class="card-ref">BPD-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-37" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-37" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-37" 
+                 data-img="https://live.staticflickr.com/65535/54549087347_489091cdeb_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550145424_aaa33e86ba_c.jpg" alt="Brincos Pequenos em Semijoia - BPD-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Pequenos em Semijoia - BPD-38</div>
+      <div class="card-ref">BPD-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BPD-38" type="text" class="counter-value" value="0" 
+                 data-ref="BPD-38" 
+                 data-desc="Brincos Pequenos em Semijoia - BPD-38" 
+                 data-img="https://live.staticflickr.com/65535/54550145424_aaa33e86ba_c.jpg"
+                 aria-label="Quantidade para Brincos Pequenos em Semijoia - BPD-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_pequenos';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Medios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Medios</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550125364_cb9df49a38_c.jpg" alt="Brincos Médios em Semijoia - BMD-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-01</div>
+      <div class="card-ref">BMD-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-01" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-01" 
+                 data-desc="Brincos Médios em Semijoia - BMD-01" 
+                 data-img="https://live.staticflickr.com/65535/54550125364_cb9df49a38_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549946321_7ca83df897_c.jpg" alt="Brincos Médios em Semijoia - BMD-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-02</div>
+      <div class="card-ref">BMD-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-02" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-02" 
+                 data-desc="Brincos Médios em Semijoia - BMD-02" 
+                 data-img="https://live.staticflickr.com/65535/54549946321_7ca83df897_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550125659_22e11a454f_c.jpg" alt="Brincos Médios em Semijoia - BMD-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-03</div>
+      <div class="card-ref">BMD-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-03" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-03" 
+                 data-desc="Brincos Médios em Semijoia - BMD-03" 
+                 data-img="https://live.staticflickr.com/65535/54550125659_22e11a454f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549067407_1fc2060b57_c.jpg" alt="Brincos Médios em Semijoia - BMD-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-04</div>
+      <div class="card-ref">BMD-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-04" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-04" 
+                 data-desc="Brincos Médios em Semijoia - BMD-04" 
+                 data-img="https://live.staticflickr.com/65535/54549067407_1fc2060b57_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550125954_02b90878b5_c.jpg" alt="Brincos Médios em Semijoia - BMD-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-05</div>
+      <div class="card-ref">BMD-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-05" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-05" 
+                 data-desc="Brincos Médios em Semijoia - BMD-05" 
+                 data-img="https://live.staticflickr.com/65535/54550125954_02b90878b5_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550180193_199760d76b_c.jpg" alt="Brincos Médios em Semijoia - BMD-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-06</div>
+      <div class="card-ref">BMD-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-06" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-06" 
+                 data-desc="Brincos Médios em Semijoia - BMD-06" 
+                 data-img="https://live.staticflickr.com/65535/54550180193_199760d76b_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550285805_9fff8fd17f_c.jpg" alt="Brincos Médios em Semijoia - BMD-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-07</div>
+      <div class="card-ref">BMD-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-07" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-07" 
+                 data-desc="Brincos Médios em Semijoia - BMD-07" 
+                 data-img="https://live.staticflickr.com/65535/54550285805_9fff8fd17f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550180488_01b674f42c_c.jpg" alt="Brincos Médios em Semijoia - BMD-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-08</div>
+      <div class="card-ref">BMD-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-08" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-08" 
+                 data-desc="Brincos Médios em Semijoia - BMD-08" 
+                 data-img="https://live.staticflickr.com/65535/54550180488_01b674f42c_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550126444_11f14b0863_c.jpg" alt="Brincos Médios em Semijoia - BMD-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-09</div>
+      <div class="card-ref">BMD-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-09" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-09" 
+                 data-desc="Brincos Médios em Semijoia - BMD-09" 
+                 data-img="https://live.staticflickr.com/65535/54550126444_11f14b0863_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550126574_4e8d614444_c.jpg" alt="Brincos Médios em Semijoia - BMD-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-10</div>
+      <div class="card-ref">BMD-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-10" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-10" 
+                 data-desc="Brincos Médios em Semijoia - BMD-10" 
+                 data-img="https://live.staticflickr.com/65535/54550126574_4e8d614444_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549068222_1c4ea9bf79_c.jpg" alt="Brincos Médios em Semijoia - BMD-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-11</div>
+      <div class="card-ref">BMD-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-11" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-11" 
+                 data-desc="Brincos Médios em Semijoia - BMD-11" 
+                 data-img="https://live.staticflickr.com/65535/54549068222_1c4ea9bf79_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549947501_91810f874e_c.jpg" alt="Brincos Médios em Semijoia - BMD-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-12</div>
+      <div class="card-ref">BMD-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-12" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-12" 
+                 data-desc="Brincos Médios em Semijoia - BMD-12" 
+                 data-img="https://live.staticflickr.com/65535/54549947501_91810f874e_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550126874_664fc4efb3_c.jpg" alt="Brincos Médios em Semijoia - BMD-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-13</div>
+      <div class="card-ref">BMD-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-13" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-13" 
+                 data-desc="Brincos Médios em Semijoia - BMD-13" 
+                 data-img="https://live.staticflickr.com/65535/54550126874_664fc4efb3_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550181228_e427af6bee_c.jpg" alt="Brincos Médios em Semijoia - BMD-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-14</div>
+      <div class="card-ref">BMD-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-14" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-14" 
+                 data-desc="Brincos Médios em Semijoia - BMD-14" 
+                 data-img="https://live.staticflickr.com/65535/54550181228_e427af6bee_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549947846_51cf41e170_c.jpg" alt="Brincos Médios em Semijoia - BMD-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-15</div>
+      <div class="card-ref">BMD-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-15" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-15" 
+                 data-desc="Brincos Médios em Semijoia - BMD-15" 
+                 data-img="https://live.staticflickr.com/65535/54549947846_51cf41e170_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549068832_4f9cb176ee_c.jpg" alt="Brincos Médios em Semijoia - BMD-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-16</div>
+      <div class="card-ref">BMD-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-16" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-16" 
+                 data-desc="Brincos Médios em Semijoia - BMD-16" 
+                 data-img="https://live.staticflickr.com/65535/54549068832_4f9cb176ee_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550127319_1c1bf834ae_c.jpg" alt="Brincos Médios em Semijoia - BMD-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-17</div>
+      <div class="card-ref">BMD-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-17" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-17" 
+                 data-desc="Brincos Médios em Semijoia - BMD-17" 
+                 data-img="https://live.staticflickr.com/65535/54550127319_1c1bf834ae_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549069142_851f28b925_c.jpg" alt="Brincos Médios em Semijoia - BMD-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-18</div>
+      <div class="card-ref">BMD-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-18" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-18" 
+                 data-desc="Brincos Médios em Semijoia - BMD-18" 
+                 data-img="https://live.staticflickr.com/65535/54549069142_851f28b925_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550182023_8b1c6c9e9f_c.jpg" alt="Brincos Médios em Semijoia - BMD-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-19</div>
+      <div class="card-ref">BMD-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-19" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-19" 
+                 data-desc="Brincos Médios em Semijoia - BMD-19" 
+                 data-img="https://live.staticflickr.com/65535/54550182023_8b1c6c9e9f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550127814_ae04e7e242_c.jpg" alt="Brincos Médios em Semijoia - BMD-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-20</div>
+      <div class="card-ref">BMD-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-20" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-20" 
+                 data-desc="Brincos Médios em Semijoia - BMD-20" 
+                 data-img="https://live.staticflickr.com/65535/54550127814_ae04e7e242_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550287520_915fe6c702_c.jpg" alt="Brincos Médios em Semijoia - BMD-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-21</div>
+      <div class="card-ref">BMD-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-21" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-21" 
+                 data-desc="Brincos Médios em Semijoia - BMD-21" 
+                 data-img="https://live.staticflickr.com/65535/54550287520_915fe6c702_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549069722_c997720863_c.jpg" alt="Brincos Médios em Semijoia - BMD-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-22</div>
+      <div class="card-ref">BMD-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-22" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-22" 
+                 data-desc="Brincos Médios em Semijoia - BMD-22" 
+                 data-img="https://live.staticflickr.com/65535/54549069722_c997720863_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550287780_d6ef0c457f_c.jpg" alt="Brincos Médios em Semijoia - BMD-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-23</div>
+      <div class="card-ref">BMD-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-23" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-23" 
+                 data-desc="Brincos Médios em Semijoia - BMD-23" 
+                 data-img="https://live.staticflickr.com/65535/54550287780_d6ef0c457f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550182638_e3811057b7_c.jpg" alt="Brincos Médios em Semijoia - BMD-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-24</div>
+      <div class="card-ref">BMD-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-24" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-24" 
+                 data-desc="Brincos Médios em Semijoia - BMD-24" 
+                 data-img="https://live.staticflickr.com/65535/54550182638_e3811057b7_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549070122_807cf9bd13_c.jpg" alt="Brincos Médios em Semijoia - BMD-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-25</div>
+      <div class="card-ref">BMD-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-25" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-25" 
+                 data-desc="Brincos Médios em Semijoia - BMD-25" 
+                 data-img="https://live.staticflickr.com/65535/54549070122_807cf9bd13_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549070267_4b6c653fb6_c.jpg" alt="Brincos Médios em Semijoia - BMD-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-26</div>
+      <div class="card-ref">BMD-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-26" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-26" 
+                 data-desc="Brincos Médios em Semijoia - BMD-26" 
+                 data-img="https://live.staticflickr.com/65535/54549070267_4b6c653fb6_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550183068_a4b245f150_c.jpg" alt="Brincos Médios em Semijoia - BMD-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-27</div>
+      <div class="card-ref">BMD-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-27" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-27" 
+                 data-desc="Brincos Médios em Semijoia - BMD-27" 
+                 data-img="https://live.staticflickr.com/65535/54550183068_a4b245f150_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550288525_09c1fe0c56_c.jpg" alt="Brincos Médios em Semijoia - BMD-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-28</div>
+      <div class="card-ref">BMD-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-28" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-28" 
+                 data-desc="Brincos Médios em Semijoia - BMD-28" 
+                 data-img="https://live.staticflickr.com/65535/54550288525_09c1fe0c56_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550129074_fa1b8dfcc8_c.jpg" alt="Brincos Médios em Semijoia - BMD-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-29</div>
+      <div class="card-ref">BMD-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-29" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-29" 
+                 data-desc="Brincos Médios em Semijoia - BMD-29" 
+                 data-img="https://live.staticflickr.com/65535/54550129074_fa1b8dfcc8_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550183493_08a60cc7c4_c.jpg" alt="Brincos Médios em Semijoia - BMD-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-30</div>
+      <div class="card-ref">BMD-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-30" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-30" 
+                 data-desc="Brincos Médios em Semijoia - BMD-30" 
+                 data-img="https://live.staticflickr.com/65535/54550183493_08a60cc7c4_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549071182_cf9e94a7e6_c.jpg" alt="Brincos Médios em Semijoia - BMD-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-31</div>
+      <div class="card-ref">BMD-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-31" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-31" 
+                 data-desc="Brincos Médios em Semijoia - BMD-31" 
+                 data-img="https://live.staticflickr.com/65535/54549071182_cf9e94a7e6_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549950306_f01e13b657_c.jpg" alt="Brincos Médios em Semijoia - BMD-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-32</div>
+      <div class="card-ref">BMD-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-32" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-32" 
+                 data-desc="Brincos Médios em Semijoia - BMD-32" 
+                 data-img="https://live.staticflickr.com/65535/54549950306_f01e13b657_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550129639_0f146ff164_c.jpg" alt="Brincos Médios em Semijoia - BMD-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-33</div>
+      <div class="card-ref">BMD-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-33" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-33" 
+                 data-desc="Brincos Médios em Semijoia - BMD-33" 
+                 data-img="https://live.staticflickr.com/65535/54550129639_0f146ff164_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550129854_bd58f01af6_c.jpg" alt="Brincos Médios em Semijoia - BMD-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-34</div>
+      <div class="card-ref">BMD-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-34" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-34" 
+                 data-desc="Brincos Médios em Semijoia - BMD-34" 
+                 data-img="https://live.staticflickr.com/65535/54550129854_bd58f01af6_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550289560_d230be88e3_c.jpg" alt="Brincos Médios em Semijoia - BMD-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-35</div>
+      <div class="card-ref">BMD-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-35" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-35" 
+                 data-desc="Brincos Médios em Semijoia - BMD-35" 
+                 data-img="https://live.staticflickr.com/65535/54550289560_d230be88e3_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550130224_959ca82213_c.jpg" alt="Brincos Médios em Semijoia - BMD-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-36</div>
+      <div class="card-ref">BMD-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-36" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-36" 
+                 data-desc="Brincos Médios em Semijoia - BMD-36" 
+                 data-img="https://live.staticflickr.com/65535/54550130224_959ca82213_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550184798_331f85422b_c.jpg" alt="Brincos Médios em Semijoia - BMD-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-37</div>
+      <div class="card-ref">BMD-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-37" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-37" 
+                 data-desc="Brincos Médios em Semijoia - BMD-37" 
+                 data-img="https://live.staticflickr.com/65535/54550184798_331f85422b_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550130564_f929167780_c.jpg" alt="Brincos Médios em Semijoia - BMD-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-38</div>
+      <div class="card-ref">BMD-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-38" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-38" 
+                 data-desc="Brincos Médios em Semijoia - BMD-38" 
+                 data-img="https://live.staticflickr.com/65535/54550130564_f929167780_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550130704_382730dbf9_c.jpg" alt="Brincos Médios em Semijoia - BMD-39" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-39</div>
+      <div class="card-ref">BMD-39</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-39" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-39" 
+                 data-desc="Brincos Médios em Semijoia - BMD-39" 
+                 data-img="https://live.staticflickr.com/65535/54550130704_382730dbf9_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-39">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549072997_3f58d8309f_c.jpg" alt="Brincos Médios em Semijoia - BMD-40" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-40</div>
+      <div class="card-ref">BMD-40</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-40" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-40" 
+                 data-desc="Brincos Médios em Semijoia - BMD-40" 
+                 data-img="https://live.staticflickr.com/65535/54549072997_3f58d8309f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-40">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550290610_50c53a8dea_c.jpg" alt="Brincos Médios em Semijoia - BMD-41" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-41</div>
+      <div class="card-ref">BMD-41</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-41" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-41" 
+                 data-desc="Brincos Médios em Semijoia - BMD-41" 
+                 data-img="https://live.staticflickr.com/65535/54550290610_50c53a8dea_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-41">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549951966_09fda4cce6_c.jpg" alt="Brincos Médios em Semijoia - BMD-42" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-42</div>
+      <div class="card-ref">BMD-42</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-42" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-42" 
+                 data-desc="Brincos Médios em Semijoia - BMD-42" 
+                 data-img="https://live.staticflickr.com/65535/54549951966_09fda4cce6_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-42">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549073457_4805f1a18b_c.jpg" alt="Brincos Médios em Semijoia - BMD-43" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-43</div>
+      <div class="card-ref">BMD-43</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-43" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-43" 
+                 data-desc="Brincos Médios em Semijoia - BMD-43" 
+                 data-img="https://live.staticflickr.com/65535/54549073457_4805f1a18b_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-43">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550185988_02ea356008_c.jpg" alt="Brincos Médios em Semijoia - BMD-44" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-44</div>
+      <div class="card-ref">BMD-44</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-44" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-44" 
+                 data-desc="Brincos Médios em Semijoia - BMD-44" 
+                 data-img="https://live.staticflickr.com/65535/54550185988_02ea356008_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-44">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549073717_dcee4303bd_c.jpg" alt="Brincos Médios em Semijoia - BMD-45" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - BMD-45</div>
+      <div class="card-ref">BMD-45</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-45" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-45" 
+                 data-desc="Brincos Médios em Semijoia - BMD-45" 
+                 data-img="https://live.staticflickr.com/65535/54549073717_dcee4303bd_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - BMD-45">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550299690_d8465ebf5f_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-46</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-46" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-46" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54550299690_d8465ebf5f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550140664_3de94d66cb_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-47</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-47" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-47" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54550140664_3de94d66cb_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550194863_aef76d9c4d_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-48</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-48" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-48" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54550194863_aef76d9c4d_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549961636_f2a1310928_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-49</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-49" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-49" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54549961636_f2a1310928_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141119_7f0296b45c_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-50</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-50" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-50" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54550141119_7f0296b45c_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141184_83b54b2ef7_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-51</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-51" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-51" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54550141184_83b54b2ef7_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141564_10e3fd4d1a_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-52</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-52" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-52" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54550141564_10e3fd4d1a_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550141609_7324b36434_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-53</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-53" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-53" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54550141609_7324b36434_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550300825_85098afce8_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-54</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-54" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-54" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54550300825_85098afce8_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301235_cc469ac78f_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-55</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-55" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-55" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54550301235_cc469ac78f_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301335_a4a64b334c_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-56</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-56" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-56" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54550301335_a4a64b334c_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301405_15bffb625b_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-57</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-57" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-57" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54550301405_15bffb625b_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549084627_0e51c8a91e_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-58</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-58" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-58" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54549084627_0e51c8a91e_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549084702_9ee160f64c_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-59</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-59" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-59" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54549084702_9ee160f64c_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550301970_0afd91d13a_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-60</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-60" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-60" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54550301970_0afd91d13a_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549085117_f6c311545a_c.jpg" alt="Brincos Médios em Semijoia - Ø12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - Ø12</div>
+      <div class="card-ref">BMD-61</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-61" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-61" 
+                 data-desc="Brincos Médios em Semijoia - Ø12" 
+                 data-img="https://live.staticflickr.com/65535/54549085117_f6c311545a_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - Ø12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549963771_52aeb43cd9_c.jpg" alt="Brincos Médios em Semijoia -  Ø14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø14</div>
+      <div class="card-ref">BMD-62</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-62" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-62" 
+                 data-desc="Brincos Médios em Semijoia -  Ø14" 
+                 data-img="https://live.staticflickr.com/65535/54549963771_52aeb43cd9_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549963836_706feaa599_c.jpg" alt="Brincos Médios em Semijoia -  Ø16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  Ø16</div>
+      <div class="card-ref">BMD-63</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-63" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-63" 
+                 data-desc="Brincos Médios em Semijoia -  Ø16" 
+                 data-img="https://live.staticflickr.com/65535/54549963836_706feaa599_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  Ø16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550197853_b8375f012b_c.jpg" alt="Brincos Médios em Semijoia - □12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia - □12</div>
+      <div class="card-ref">BMD-64</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-64" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-64" 
+                 data-desc="Brincos Médios em Semijoia - □12" 
+                 data-img="https://live.staticflickr.com/65535/54550197853_b8375f012b_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia - □12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549964426_4b425208c6_c.jpg" alt="Brincos Médios em Semijoia -  □14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  □14</div>
+      <div class="card-ref">BMD-65</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-65" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-65" 
+                 data-desc="Brincos Médios em Semijoia -  □14" 
+                 data-img="https://live.staticflickr.com/65535/54549964426_4b425208c6_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  □14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550303115_6d6c9d3254_c.jpg" alt="Brincos Médios em Semijoia -  □16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Médios em Semijoia -  □16</div>
+      <div class="card-ref">BMD-66</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BMD-66" type="text" class="counter-value" value="0" 
+                 data-ref="BMD-66" 
+                 data-desc="Brincos Médios em Semijoia -  □16" 
+                 data-img="https://live.staticflickr.com/65535/54550303115_6d6c9d3254_c.jpg"
+                 aria-label="Quantidade para Brincos Médios em Semijoia -  □16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_medios';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

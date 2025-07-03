@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Acesse sua Conta - Atacado de Semijoias{% endblock %}
+
+{% block content %}
+<main>
+  <div class="titulo-catalogo">Acesse ou Crie sua Conta</div>
+  
+  <div id="redirectMessage" class="redirect-message" style="display: none; max-width: 450px; margin: 0 auto 20px auto;"></div>
+
+  <div style="max-width: 450px; margin: 20px auto; padding: 20px; background: #f9f9f9; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    
+    <div id="feedbackMessage" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 8px; text-align: center; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb;"></div>
+
+    <div id="etapaEmail">
+      <form id="formEnviarCodigo">
+        <p style="text-align: center; color: #555; margin-top: 0;">Digite seu e-mail ou celular para receber o código de acesso.</p>
+        <div style="margin-bottom: 15px;">
+          <label for="login_identificador" style="display: block; margin-bottom: 5px; font-weight: bold;">E-mail ou Celular (com DDD):</label>
+          <input type="text" id="login_identificador" name="login_identificador" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+        </div>
+        <button type="submit" class="botao-padrao botao-whatsapp">Receber Código</button>
+      </form>
+    </div>
+
+    <div id="etapaCodigo" style="display:none;">
+      <form id="formValidarCodigo" method="POST">
+        <p id="codigoMensagem" style="text-align: center; color: #555; margin-top: 0;">
+          Enviamos um código de 6 dígitos para <strong id="destinoDisplay"></strong>.
+          <span id="msgVerificacao"></span>
+        </p>
+        
+        <input type="hidden" name="email" id="hiddenEmail">
+        <input type="hidden" name="redirect_url" id="redirect_url">
+
+        <div style="margin-bottom: 15px;">
+          <label for="codigo" style="display: block; margin-bottom: 5px; font-weight: bold;">Código de Verificação:</label>
+          <input type="text" id="codigo" name="codigo" required inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; font-size: 1.5em; text-align: center; letter-spacing: 5px;">
+        </div>
+        <button type="submit" class="botao-padrao botao-whatsapp botao-piscando">Validar Código e Entrar</button>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const formEnviarCodigo = document.getElementById('formEnviarCodigo');
+    const formValidarCodigo = document.getElementById('formValidarCodigo');
+    
+    const etapaEmailDiv = document.getElementById('etapaEmail');
+    const etapaCodigoDiv = document.getElementById('etapaCodigo');
+    const feedbackMessageDiv = document.getElementById('feedbackMessage');
+    const identificadorInput = document.getElementById('login_identificador');
+    const destinoDisplay = document.getElementById('destinoDisplay');
+    const hiddenEmail = document.getElementById('hiddenEmail');
+    const msgVerificacao = document.getElementById('msgVerificacao');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectUrl = urlParams.get('redirect_url');
+    if (redirectUrl) {
+      document.getElementById('redirect_url').value = redirectUrl;
+    }
+
+    formEnviarCodigo.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const identificador = identificadorInput.value.trim();
+        const submitButton = formEnviarCodigo.querySelector('button');
+        submitButton.disabled = true;
+        submitButton.textContent = 'A enviar...';
+        feedbackMessageDiv.style.display = 'none';
+
+        fetch('enviar_codigo.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'login_identificador=' + encodeURIComponent(identificador)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                etapaEmailDiv.style.display = 'none';
+                etapaCodigoDiv.style.display = 'block';
+                
+                destinoDisplay.textContent = data.destino_para_display;
+                hiddenEmail.value = data.email_para_validacao; // Guarda o e-mail real para validação
+
+                msgVerificacao.textContent = (data.tipo_envio === 'email') 
+                    ? 'Verifique sua caixa de entrada e spam.' 
+                    : 'Verifique seu SMS.';
+
+                document.getElementById('codigo').focus();
+            } else {
+                feedbackMessageDiv.textContent = 'ERRO: ' + (data.mensagem || 'Ocorreu um erro desconhecido.');
+                feedbackMessageDiv.style.display = 'block';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Receber Código';
+            }
+        })
+        .catch(error => {
+            feedbackMessageDiv.textContent = 'Erro de comunicação: ' + error.message;
+            feedbackMessageDiv.style.display = 'block';
+            submitButton.disabled = false;
+            submitButton.textContent = 'Receber Código';
+        });
+    });
+
+    formValidarCodigo.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const submitButton = formValidarCodigo.querySelector('button');
+        submitButton.disabled = true;
+        submitButton.textContent = 'A validar...';
+        feedbackMessageDiv.style.display = 'none';
+
+        const formData = new FormData(formValidarCodigo);
+
+        fetch('validar_codigo.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                window.location.href = data.redirect_url;
+            } else {
+                feedbackMessageDiv.textContent = 'ERRO: ' + (data.mensagem || 'Ocorreu um erro desconhecido.');
+                feedbackMessageDiv.style.display = 'block';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Validar Código e Entrar';
+            }
+        })
+        .catch(error => {
+            feedbackMessageDiv.textContent = 'Erro de comunicação: ' + error.message;
+            feedbackMessageDiv.style.display = 'block';
+            submitButton.disabled = false;
+            submitButton.textContent = 'Validar Código e Entrar';
+        });
+    });
+});
+</script>
+{% endblock %}

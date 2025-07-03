@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Cartilagem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Cartilagem</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550094929_c08faef1de_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-01</div>
+      <div class="card-ref">BCA-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-01" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-01" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-01" 
+                 data-img="https://live.staticflickr.com/65535/54550094929_c08faef1de_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550254460_4ef4429b9e_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-02</div>
+      <div class="card-ref">BCA-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-02" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-02" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-02" 
+                 data-img="https://live.staticflickr.com/65535/54550254460_4ef4429b9e_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550254595_e69ac8426d_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-03</div>
+      <div class="card-ref">BCA-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-03" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-03" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-03" 
+                 data-img="https://live.staticflickr.com/65535/54550254595_e69ac8426d_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550254735_c1ee724cd7_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-04</div>
+      <div class="card-ref">BCA-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-04" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-04" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-04" 
+                 data-img="https://live.staticflickr.com/65535/54550254735_c1ee724cd7_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550148303_f92fe055c5_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-05</div>
+      <div class="card-ref">BCA-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-05" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-05" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-05" 
+                 data-img="https://live.staticflickr.com/65535/54550148303_f92fe055c5_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549036757_c6708f801f_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-06</div>
+      <div class="card-ref">BCA-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-06" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-06" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-06" 
+                 data-img="https://live.staticflickr.com/65535/54549036757_c6708f801f_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550255120_238322d734_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-07</div>
+      <div class="card-ref">BCA-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-07" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-07" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-07" 
+                 data-img="https://live.staticflickr.com/65535/54550255120_238322d734_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550095799_3a9a12b6c8_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-08</div>
+      <div class="card-ref">BCA-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-08" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-08" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-08" 
+                 data-img="https://live.staticflickr.com/65535/54550095799_3a9a12b6c8_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549915611_c2f25aa03d_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-09</div>
+      <div class="card-ref">BCA-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-09" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-09" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-09" 
+                 data-img="https://live.staticflickr.com/65535/54549915611_c2f25aa03d_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550255500_c4e7e51b2d_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-10</div>
+      <div class="card-ref">BCA-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-10" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-10" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-10" 
+                 data-img="https://live.staticflickr.com/65535/54550255500_c4e7e51b2d_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549915946_56cd7296e8_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-11</div>
+      <div class="card-ref">BCA-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-11" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-11" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-11" 
+                 data-img="https://live.staticflickr.com/65535/54549915946_56cd7296e8_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550149018_3ac401c84b_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-12</div>
+      <div class="card-ref">BCA-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-12" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-12" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-12" 
+                 data-img="https://live.staticflickr.com/65535/54550149018_3ac401c84b_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550255745_46f382a738_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-13</div>
+      <div class="card-ref">BCA-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-13" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-13" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-13" 
+                 data-img="https://live.staticflickr.com/65535/54550255745_46f382a738_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549037682_a2608c8679_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-14</div>
+      <div class="card-ref">BCA-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-14" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-14" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-14" 
+                 data-img="https://live.staticflickr.com/65535/54549037682_a2608c8679_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550149393_e9e59020e0_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-15</div>
+      <div class="card-ref">BCA-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-15" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-15" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-15" 
+                 data-img="https://live.staticflickr.com/65535/54550149393_e9e59020e0_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549037877_a8161deb66_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-16</div>
+      <div class="card-ref">BCA-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-16" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-16" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-16" 
+                 data-img="https://live.staticflickr.com/65535/54549037877_a8161deb66_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550149663_473a60933b_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-17</div>
+      <div class="card-ref">BCA-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-17" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-17" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-17" 
+                 data-img="https://live.staticflickr.com/65535/54550149663_473a60933b_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550256440_4517fe7ee9_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-18</div>
+      <div class="card-ref">BCA-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-18" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-18" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-18" 
+                 data-img="https://live.staticflickr.com/65535/54550256440_4517fe7ee9_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550149878_f4ed7626aa_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-19</div>
+      <div class="card-ref">BCA-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-19" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-19" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-19" 
+                 data-img="https://live.staticflickr.com/65535/54550149878_f4ed7626aa_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549038377_19cdfbb542_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-20</div>
+      <div class="card-ref">BCA-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-20" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-20" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-20" 
+                 data-img="https://live.staticflickr.com/65535/54549038377_19cdfbb542_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550097569_b5a1680a90_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-21</div>
+      <div class="card-ref">BCA-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-21" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-21" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-21" 
+                 data-img="https://live.staticflickr.com/65535/54550097569_b5a1680a90_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549038672_0b0b3d7eb1_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-22</div>
+      <div class="card-ref">BCA-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-22" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-22" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-22" 
+                 data-img="https://live.staticflickr.com/65535/54549038672_0b0b3d7eb1_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549917566_e7c250e630_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-23</div>
+      <div class="card-ref">BCA-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-23" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-23" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-23" 
+                 data-img="https://live.staticflickr.com/65535/54549917566_e7c250e630_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550097949_a2733f6bf8_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-24</div>
+      <div class="card-ref">BCA-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-24" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-24" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-24" 
+                 data-img="https://live.staticflickr.com/65535/54550097949_a2733f6bf8_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550150843_5b8a40ff42_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-25</div>
+      <div class="card-ref">BCA-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-25" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-25" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-25" 
+                 data-img="https://live.staticflickr.com/65535/54550150843_5b8a40ff42_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550151033_cbee9420eb_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-26</div>
+      <div class="card-ref">BCA-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-26" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-26" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-26" 
+                 data-img="https://live.staticflickr.com/65535/54550151033_cbee9420eb_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549918081_cab412644d_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-27</div>
+      <div class="card-ref">BCA-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-27" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-27" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-27" 
+                 data-img="https://live.staticflickr.com/65535/54549918081_cab412644d_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550151253_fdc9339f7e_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-28</div>
+      <div class="card-ref">BCA-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-28" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-28" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-28" 
+                 data-img="https://live.staticflickr.com/65535/54550151253_fdc9339f7e_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550151338_800db7794c_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-29</div>
+      <div class="card-ref">BCA-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-29" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-29" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-29" 
+                 data-img="https://live.staticflickr.com/65535/54550151338_800db7794c_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549039692_29bd82d3bb_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-30</div>
+      <div class="card-ref">BCA-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-30" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-30" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-30" 
+                 data-img="https://live.staticflickr.com/65535/54549039692_29bd82d3bb_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550151548_05973b6080_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-31</div>
+      <div class="card-ref">BCA-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-31" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-31" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-31" 
+                 data-img="https://live.staticflickr.com/65535/54550151548_05973b6080_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550098994_29d8f7b0ef_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-32</div>
+      <div class="card-ref">BCA-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-32" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-32" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-32" 
+                 data-img="https://live.staticflickr.com/65535/54550098994_29d8f7b0ef_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550151818_b7a280feae_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-33</div>
+      <div class="card-ref">BCA-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-33" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-33" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-33" 
+                 data-img="https://live.staticflickr.com/65535/54550151818_b7a280feae_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550258525_83cbb4c5e7_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-34</div>
+      <div class="card-ref">BCA-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-34" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-34" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-34" 
+                 data-img="https://live.staticflickr.com/65535/54550258525_83cbb4c5e7_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550258600_c73d465b82_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-35</div>
+      <div class="card-ref">BCA-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-35" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-35" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-35" 
+                 data-img="https://live.staticflickr.com/65535/54550258600_c73d465b82_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550152183_58c8e20443_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-36</div>
+      <div class="card-ref">BCA-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-36" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-36" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-36" 
+                 data-img="https://live.staticflickr.com/65535/54550152183_58c8e20443_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550258825_92b667bbbf_c.jpg" alt="Brincos Cartilagem em Semijoia - BCA-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Cartilagem em Semijoia - BCA-37</div>
+      <div class="card-ref">BCA-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BCA-37" type="text" class="counter-value" value="0" 
+                 data-ref="BCA-37" 
+                 data-desc="Brincos Cartilagem em Semijoia - BCA-37" 
+                 data-img="https://live.staticflickr.com/65535/54550258825_92b667bbbf_c.jpg"
+                 aria-label="Quantidade para Brincos Cartilagem em Semijoia - BCA-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_cartilagem';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

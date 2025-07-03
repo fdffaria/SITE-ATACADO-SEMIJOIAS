@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Brincos Grandes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Brincos Grandes</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550274685_0370f5b471_c.jpg" alt="Brincos Grandes em Semijoia - BGR-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-01</div>
+      <div class="card-ref">BGR-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-01" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-01" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-01" 
+                 data-img="https://live.staticflickr.com/65535/54550274685_0370f5b471_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550274755_8df7e1e10b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-02</div>
+      <div class="card-ref">BGR-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-02" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-02" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-02" 
+                 data-img="https://live.staticflickr.com/65535/54550274755_8df7e1e10b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549056352_2b90ba57d9_c.jpg" alt="Brincos Grandes em Semijoia - BGR-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-03</div>
+      <div class="card-ref">BGR-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-03" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-03" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-03" 
+                 data-img="https://live.staticflickr.com/65535/54549056352_2b90ba57d9_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549056442_66e94161a4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-04</div>
+      <div class="card-ref">BGR-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-04" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-04" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-04" 
+                 data-img="https://live.staticflickr.com/65535/54549056442_66e94161a4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550115659_a48c861a94_c.jpg" alt="Brincos Grandes em Semijoia - BGR-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-05</div>
+      <div class="card-ref">BGR-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-05" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-05" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-05" 
+                 data-img="https://live.staticflickr.com/65535/54550115659_a48c861a94_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550169263_010f642bb5_c.jpg" alt="Brincos Grandes em Semijoia - BGR-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-06</div>
+      <div class="card-ref">BGR-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-06" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-06" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-06" 
+                 data-img="https://live.staticflickr.com/65535/54550169263_010f642bb5_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550115879_2e77660578_c.jpg" alt="Brincos Grandes em Semijoia - BGR-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-07</div>
+      <div class="card-ref">BGR-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-07" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-07" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-07" 
+                 data-img="https://live.staticflickr.com/65535/54550115879_2e77660578_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549056852_67f0cb7f22_c.jpg" alt="Brincos Grandes em Semijoia - BGR-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-08</div>
+      <div class="card-ref">BGR-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-08" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-08" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-08" 
+                 data-img="https://live.staticflickr.com/65535/54549056852_67f0cb7f22_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550169548_8d595350b4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-09</div>
+      <div class="card-ref">BGR-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-09" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-09" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-09" 
+                 data-img="https://live.staticflickr.com/65535/54550169548_8d595350b4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550275560_2704821ea9_c.jpg" alt="Brincos Grandes em Semijoia - BGR-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-10</div>
+      <div class="card-ref">BGR-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-10" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-10" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-10" 
+                 data-img="https://live.staticflickr.com/65535/54550275560_2704821ea9_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549057127_70bdef35af_c.jpg" alt="Brincos Grandes em Semijoia - BGR-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-11</div>
+      <div class="card-ref">BGR-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-11" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-11" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-11" 
+                 data-img="https://live.staticflickr.com/65535/54549057127_70bdef35af_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550116319_94542b7457_c.jpg" alt="Brincos Grandes em Semijoia - BGR-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-12</div>
+      <div class="card-ref">BGR-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-12" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-12" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-12" 
+                 data-img="https://live.staticflickr.com/65535/54550116319_94542b7457_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550169923_ae19e6c90c_c.jpg" alt="Brincos Grandes em Semijoia - BGR-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-13</div>
+      <div class="card-ref">BGR-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-13" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-13" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-13" 
+                 data-img="https://live.staticflickr.com/65535/54550169923_ae19e6c90c_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550170008_126269fc49_c.jpg" alt="Brincos Grandes em Semijoia - BGR-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-14</div>
+      <div class="card-ref">BGR-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-14" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-14" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-14" 
+                 data-img="https://live.staticflickr.com/65535/54550170008_126269fc49_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550116609_7f82f0bae2_c.jpg" alt="Brincos Grandes em Semijoia - BGR-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-15</div>
+      <div class="card-ref">BGR-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-15" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-15" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-15" 
+                 data-img="https://live.staticflickr.com/65535/54550116609_7f82f0bae2_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549936856_e4dc67acaa_c.jpg" alt="Brincos Grandes em Semijoia - BGR-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-16</div>
+      <div class="card-ref">BGR-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-16" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-16" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-16" 
+                 data-img="https://live.staticflickr.com/65535/54549936856_e4dc67acaa_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550170298_ddc0dd4dea_c.jpg" alt="Brincos Grandes em Semijoia - BGR-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-17</div>
+      <div class="card-ref">BGR-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-17" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-17" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-17" 
+                 data-img="https://live.staticflickr.com/65535/54550170298_ddc0dd4dea_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550276390_a1e0bbd522_c.jpg" alt="Brincos Grandes em Semijoia - BGR-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-18</div>
+      <div class="card-ref">BGR-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-18" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-18" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-18" 
+                 data-img="https://live.staticflickr.com/65535/54550276390_a1e0bbd522_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550170483_6c68d1650c_c.jpg" alt="Brincos Grandes em Semijoia - BGR-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-19</div>
+      <div class="card-ref">BGR-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-19" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-19" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-19" 
+                 data-img="https://live.staticflickr.com/65535/54550170483_6c68d1650c_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549937281_b39c6e63d1_c.jpg" alt="Brincos Grandes em Semijoia - BGR-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-20</div>
+      <div class="card-ref">BGR-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-20" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-20" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-20" 
+                 data-img="https://live.staticflickr.com/65535/54549937281_b39c6e63d1_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550170758_275c5b752b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-21</div>
+      <div class="card-ref">BGR-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-21" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-21" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-21" 
+                 data-img="https://live.staticflickr.com/65535/54550170758_275c5b752b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549937481_6366337797_c.jpg" alt="Brincos Grandes em Semijoia - BGR-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-22</div>
+      <div class="card-ref">BGR-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-22" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-22" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-22" 
+                 data-img="https://live.staticflickr.com/65535/54549937481_6366337797_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550276900_c8884de13d_c.jpg" alt="Brincos Grandes em Semijoia - BGR-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-23</div>
+      <div class="card-ref">BGR-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-23" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-23" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-23" 
+                 data-img="https://live.staticflickr.com/65535/54550276900_c8884de13d_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550277010_fd4f679a99_c.jpg" alt="Brincos Grandes em Semijoia - BGR-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-24</div>
+      <div class="card-ref">BGR-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-24" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-24" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-24" 
+                 data-img="https://live.staticflickr.com/65535/54550277010_fd4f679a99_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550117564_30a77ab3fe_c.jpg" alt="Brincos Grandes em Semijoia - BGR-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-25</div>
+      <div class="card-ref">BGR-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-25" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-25" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-25" 
+                 data-img="https://live.staticflickr.com/65535/54550117564_30a77ab3fe_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550277270_aca6eb8d9b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-26</div>
+      <div class="card-ref">BGR-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-26" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-26" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-26" 
+                 data-img="https://live.staticflickr.com/65535/54550277270_aca6eb8d9b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550171373_e436c4401d_c.jpg" alt="Brincos Grandes em Semijoia - BGR-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-27</div>
+      <div class="card-ref">BGR-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-27" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-27" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-27" 
+                 data-img="https://live.staticflickr.com/65535/54550171373_e436c4401d_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550277460_7c94369665_c.jpg" alt="Brincos Grandes em Semijoia - BGR-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-28</div>
+      <div class="card-ref">BGR-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-28" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-28" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-28" 
+                 data-img="https://live.staticflickr.com/65535/54550277460_7c94369665_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550171648_de2fb83aeb_c.jpg" alt="Brincos Grandes em Semijoia - BGR-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-29</div>
+      <div class="card-ref">BGR-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-29" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-29" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-29" 
+                 data-img="https://live.staticflickr.com/65535/54550171648_de2fb83aeb_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549059232_d6b030e0a4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-30</div>
+      <div class="card-ref">BGR-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-30" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-30" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-30" 
+                 data-img="https://live.staticflickr.com/65535/54549059232_d6b030e0a4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550171918_a1587c7e7a_c.jpg" alt="Brincos Grandes em Semijoia - BGR-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-31</div>
+      <div class="card-ref">BGR-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-31" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-31" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-31" 
+                 data-img="https://live.staticflickr.com/65535/54550171918_a1587c7e7a_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549059437_61c6db14f0_c.jpg" alt="Brincos Grandes em Semijoia - BGR-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-32</div>
+      <div class="card-ref">BGR-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-32" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-32" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-32" 
+                 data-img="https://live.staticflickr.com/65535/54549059437_61c6db14f0_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550278060_761efc9156_c.jpg" alt="Brincos Grandes em Semijoia - BGR-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-33</div>
+      <div class="card-ref">BGR-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-33" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-33" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-33" 
+                 data-img="https://live.staticflickr.com/65535/54550278060_761efc9156_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550278175_bfe43ae29e_c.jpg" alt="Brincos Grandes em Semijoia - BGR-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-34</div>
+      <div class="card-ref">BGR-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-34" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-34" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-34" 
+                 data-img="https://live.staticflickr.com/65535/54550278175_bfe43ae29e_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549059757_7d3d5cdfcc_c.jpg" alt="Brincos Grandes em Semijoia - BGR-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-35</div>
+      <div class="card-ref">BGR-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-35" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-35" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-35" 
+                 data-img="https://live.staticflickr.com/65535/54549059757_7d3d5cdfcc_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550278410_e1918f4ed8_c.jpg" alt="Brincos Grandes em Semijoia - BGR-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-36</div>
+      <div class="card-ref">BGR-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-36" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-36" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-36" 
+                 data-img="https://live.staticflickr.com/65535/54550278410_e1918f4ed8_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549939276_48403540f6_c.jpg" alt="Brincos Grandes em Semijoia - BGR-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-37</div>
+      <div class="card-ref">BGR-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-37" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-37" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-37" 
+                 data-img="https://live.staticflickr.com/65535/54549939276_48403540f6_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549939391_225d4800ab_c.jpg" alt="Brincos Grandes em Semijoia - BGR-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-38</div>
+      <div class="card-ref">BGR-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-38" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-38" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-38" 
+                 data-img="https://live.staticflickr.com/65535/54549939391_225d4800ab_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550278750_993d796d8f_c.jpg" alt="Brincos Grandes em Semijoia - BGR-39" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-39</div>
+      <div class="card-ref">BGR-39</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-39" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-39" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-39" 
+                 data-img="https://live.staticflickr.com/65535/54550278750_993d796d8f_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-39">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550172998_d788f34111_c.jpg" alt="Brincos Grandes em Semijoia - BGR-40" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-40</div>
+      <div class="card-ref">BGR-40</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-40" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-40" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-40" 
+                 data-img="https://live.staticflickr.com/65535/54550172998_d788f34111_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-40">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550278950_221abf1b39_c.jpg" alt="Brincos Grandes em Semijoia - BGR-41" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-41</div>
+      <div class="card-ref">BGR-41</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-41" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-41" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-41" 
+                 data-img="https://live.staticflickr.com/65535/54550278950_221abf1b39_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-41">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550119659_ae53923c38_c.jpg" alt="Brincos Grandes em Semijoia - BGR-42" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-42</div>
+      <div class="card-ref">BGR-42</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-42" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-42" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-42" 
+                 data-img="https://live.staticflickr.com/65535/54550119659_ae53923c38_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-42">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550279245_d91a935708_c.jpg" alt="Brincos Grandes em Semijoia - BGR-43" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-43</div>
+      <div class="card-ref">BGR-43</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-43" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-43" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-43" 
+                 data-img="https://live.staticflickr.com/65535/54550279245_d91a935708_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-43">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550119834_876b22d601_c.jpg" alt="Brincos Grandes em Semijoia - BGR-44" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-44</div>
+      <div class="card-ref">BGR-44</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-44" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-44" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-44" 
+                 data-img="https://live.staticflickr.com/65535/54550119834_876b22d601_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-44">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550119949_e54aa91a35_c.jpg" alt="Brincos Grandes em Semijoia - BGR-45" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-45</div>
+      <div class="card-ref">BGR-45</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-45" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-45" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-45" 
+                 data-img="https://live.staticflickr.com/65535/54550119949_e54aa91a35_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-45">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549940311_00a07d0f3f_c.jpg" alt="Brincos Grandes em Semijoia - BGR-46" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-46</div>
+      <div class="card-ref">BGR-46</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-46" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-46" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-46" 
+                 data-img="https://live.staticflickr.com/65535/54549940311_00a07d0f3f_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-46">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549061142_9ed295120f_c.jpg" alt="Brincos Grandes em Semijoia - BGR-47" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-47</div>
+      <div class="card-ref">BGR-47</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-47" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-47" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-47" 
+                 data-img="https://live.staticflickr.com/65535/54549061142_9ed295120f_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-47">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549940496_25524a1aba_c.jpg" alt="Brincos Grandes em Semijoia - BGR-48" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-48</div>
+      <div class="card-ref">BGR-48</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-48" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-48" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-48" 
+                 data-img="https://live.staticflickr.com/65535/54549940496_25524a1aba_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-48">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550173943_7568f71907_c.jpg" alt="Brincos Grandes em Semijoia - BGR-49" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-49</div>
+      <div class="card-ref">BGR-49</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-49" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-49" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-49" 
+                 data-img="https://live.staticflickr.com/65535/54550173943_7568f71907_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-49">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550120454_f8f0996de4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-50" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-50</div>
+      <div class="card-ref">BGR-50</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-50" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-50" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-50" 
+                 data-img="https://live.staticflickr.com/65535/54550120454_f8f0996de4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-50">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550279950_51cdd72b48_c.jpg" alt="Brincos Grandes em Semijoia - BGR-51" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-51</div>
+      <div class="card-ref">BGR-51</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-51" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-51" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-51" 
+                 data-img="https://live.staticflickr.com/65535/54550279950_51cdd72b48_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-51">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550174123_060c4d7b44_c.jpg" alt="Brincos Grandes em Semijoia - BGR-52" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-52</div>
+      <div class="card-ref">BGR-52</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-52" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-52" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-52" 
+                 data-img="https://live.staticflickr.com/65535/54550174123_060c4d7b44_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-52">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549940986_902b09cfa0_c.jpg" alt="Brincos Grandes em Semijoia - BGR-53" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-53</div>
+      <div class="card-ref">BGR-53</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-53" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-53" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-53" 
+                 data-img="https://live.staticflickr.com/65535/54549940986_902b09cfa0_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-53">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549061822_d6a56b9574_c.jpg" alt="Brincos Grandes em Semijoia - BGR-54" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-54</div>
+      <div class="card-ref">BGR-54</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-54" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-54" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-54" 
+                 data-img="https://live.staticflickr.com/65535/54549061822_d6a56b9574_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-54">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550280340_764e5b7a82_c.jpg" alt="Brincos Grandes em Semijoia - BGR-55" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-55</div>
+      <div class="card-ref">BGR-55</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-55" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-55" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-55" 
+                 data-img="https://live.staticflickr.com/65535/54550280340_764e5b7a82_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-55">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550280430_86d1dfbbe3_c.jpg" alt="Brincos Grandes em Semijoia - BGR-56" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-56</div>
+      <div class="card-ref">BGR-56</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-56" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-56" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-56" 
+                 data-img="https://live.staticflickr.com/65535/54550280430_86d1dfbbe3_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-56">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550174598_5a956e9536_c.jpg" alt="Brincos Grandes em Semijoia - BGR-57" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-57</div>
+      <div class="card-ref">BGR-57</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-57" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-57" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-57" 
+                 data-img="https://live.staticflickr.com/65535/54550174598_5a956e9536_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-57">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549941486_2b35ab8a8e_c.jpg" alt="Brincos Grandes em Semijoia - BGR-58" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-58</div>
+      <div class="card-ref">BGR-58</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-58" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-58" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-58" 
+                 data-img="https://live.staticflickr.com/65535/54549941486_2b35ab8a8e_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-58">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549941566_3268553179_c.jpg" alt="Brincos Grandes em Semijoia - BGR-59" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-59</div>
+      <div class="card-ref">BGR-59</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-59" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-59" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-59" 
+                 data-img="https://live.staticflickr.com/65535/54549941566_3268553179_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-59">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550280785_dbb2f944ca_c.jpg" alt="Brincos Grandes em Semijoia - BGR-60" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-60</div>
+      <div class="card-ref">BGR-60</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-60" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-60" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-60" 
+                 data-img="https://live.staticflickr.com/65535/54550280785_dbb2f944ca_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-60">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549941711_8d15416c29_c.jpg" alt="Brincos Grandes em Semijoia - BGR-61" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-61</div>
+      <div class="card-ref">BGR-61</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-61" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-61" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-61" 
+                 data-img="https://live.staticflickr.com/65535/54549941711_8d15416c29_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-61">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549941816_36c5196cb1_c.jpg" alt="Brincos Grandes em Semijoia - BGR-62" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-62</div>
+      <div class="card-ref">BGR-62</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-62" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-62" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-62" 
+                 data-img="https://live.staticflickr.com/65535/54549941816_36c5196cb1_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-62">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550121574_6ca87e1399_c.jpg" alt="Brincos Grandes em Semijoia - BGR-63" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-63</div>
+      <div class="card-ref">BGR-63</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-63" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-63" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-63" 
+                 data-img="https://live.staticflickr.com/65535/54550121574_6ca87e1399_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-63">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549062657_2d49ed41c0_c.jpg" alt="Brincos Grandes em Semijoia - BGR-64" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-64</div>
+      <div class="card-ref">BGR-64</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-64" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-64" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-64" 
+                 data-img="https://live.staticflickr.com/65535/54549062657_2d49ed41c0_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-64">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550121794_12f886cbc9_c.jpg" alt="Brincos Grandes em Semijoia - BGR-65" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-65</div>
+      <div class="card-ref">BGR-65</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-65" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-65" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-65" 
+                 data-img="https://live.staticflickr.com/65535/54550121794_12f886cbc9_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-65">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550281250_923b666536_c.jpg" alt="Brincos Grandes em Semijoia - BGR-66" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-66</div>
+      <div class="card-ref">BGR-66</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-66" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-66" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-66" 
+                 data-img="https://live.staticflickr.com/65535/54550281250_923b666536_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-66">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549942296_7f06d8cfe2_c.jpg" alt="Brincos Grandes em Semijoia - BGR-67" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-67</div>
+      <div class="card-ref">BGR-67</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-67" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-67" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-67" 
+                 data-img="https://live.staticflickr.com/65535/54549942296_7f06d8cfe2_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-67">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550121969_1aea614d06_c.jpg" alt="Brincos Grandes em Semijoia - BGR-68" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-68</div>
+      <div class="card-ref">BGR-68</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-68" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-68" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-68" 
+                 data-img="https://live.staticflickr.com/65535/54550121969_1aea614d06_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-68">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550175683_d5a23c9316_c.jpg" alt="Brincos Grandes em Semijoia - BGR-69" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-69</div>
+      <div class="card-ref">BGR-69</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-69" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-69" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-69" 
+                 data-img="https://live.staticflickr.com/65535/54550175683_d5a23c9316_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-69">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550281680_3566d1f9c4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-70" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-70</div>
+      <div class="card-ref">BGR-70</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-70" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-70" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-70" 
+                 data-img="https://live.staticflickr.com/65535/54550281680_3566d1f9c4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-70">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549942726_d35dcbdf27_c.jpg" alt="Brincos Grandes em Semijoia - BGR-71" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-71</div>
+      <div class="card-ref">BGR-71</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-71" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-71" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-71" 
+                 data-img="https://live.staticflickr.com/65535/54549942726_d35dcbdf27_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-71">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549942846_68372077d0_c.jpg" alt="Brincos Grandes em Semijoia - BGR-72" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-72</div>
+      <div class="card-ref">BGR-72</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-72" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-72" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-72" 
+                 data-img="https://live.staticflickr.com/65535/54549942846_68372077d0_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-72">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550122349_8024ec6317_c.jpg" alt="Brincos Grandes em Semijoia - BGR-73" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-73</div>
+      <div class="card-ref">BGR-73</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-73" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-73" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-73" 
+                 data-img="https://live.staticflickr.com/65535/54550122349_8024ec6317_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-73">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550282055_7288c17d07_c.jpg" alt="Brincos Grandes em Semijoia - BGR-74" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-74</div>
+      <div class="card-ref">BGR-74</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-74" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-74" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-74" 
+                 data-img="https://live.staticflickr.com/65535/54550282055_7288c17d07_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-74">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550282140_4be3916b19_c.jpg" alt="Brincos Grandes em Semijoia - BGR-75" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-75</div>
+      <div class="card-ref">BGR-75</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-75" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-75" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-75" 
+                 data-img="https://live.staticflickr.com/65535/54550282140_4be3916b19_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-75">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549943231_520cdf6c2d_c.jpg" alt="Brincos Grandes em Semijoia - BGR-76" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-76</div>
+      <div class="card-ref">BGR-76</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-76" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-76" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-76" 
+                 data-img="https://live.staticflickr.com/65535/54549943231_520cdf6c2d_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-76">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550282300_1f3acc2da2_c.jpg" alt="Brincos Grandes em Semijoia - BGR-77" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-77</div>
+      <div class="card-ref">BGR-77</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-77" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-77" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-77" 
+                 data-img="https://live.staticflickr.com/65535/54550282300_1f3acc2da2_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-77">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549943401_cdaf7ea2a0_c.jpg" alt="Brincos Grandes em Semijoia - BGR-78" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-78</div>
+      <div class="card-ref">BGR-78</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-78" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-78" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-78" 
+                 data-img="https://live.staticflickr.com/65535/54549943401_cdaf7ea2a0_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-78">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550176673_03d1b8f434_c.jpg" alt="Brincos Grandes em Semijoia - BGR-79" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-79</div>
+      <div class="card-ref">BGR-79</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-79" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-79" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-79" 
+                 data-img="https://live.staticflickr.com/65535/54550176673_03d1b8f434_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-79">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550122879_b80f8963fe_c.jpg" alt="Brincos Grandes em Semijoia - BGR-80" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-80</div>
+      <div class="card-ref">BGR-80</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-80" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-80" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-80" 
+                 data-img="https://live.staticflickr.com/65535/54550122879_b80f8963fe_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-80">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550282610_5a2203b4c9_c.jpg" alt="Brincos Grandes em Semijoia - BGR-81" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-81</div>
+      <div class="card-ref">BGR-81</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-81" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-81" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-81" 
+                 data-img="https://live.staticflickr.com/65535/54550282610_5a2203b4c9_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-81">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549943811_fb9c20d8df_c.jpg" alt="Brincos Grandes em Semijoia - BGR-82" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-82</div>
+      <div class="card-ref">BGR-82</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-82" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-82" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-82" 
+                 data-img="https://live.staticflickr.com/65535/54549943811_fb9c20d8df_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-82">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550282805_fab039730e_c.jpg" alt="Brincos Grandes em Semijoia - BGR-83" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-83</div>
+      <div class="card-ref">BGR-83</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-83" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-83" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-83" 
+                 data-img="https://live.staticflickr.com/65535/54550282805_fab039730e_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-83">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549944006_1737db997a_c.jpg" alt="Brincos Grandes em Semijoia - BGR-84" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-84</div>
+      <div class="card-ref">BGR-84</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-84" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-84" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-84" 
+                 data-img="https://live.staticflickr.com/65535/54549944006_1737db997a_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-84">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550123454_571b6443bd_c.jpg" alt="Brincos Grandes em Semijoia - BGR-85" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-85</div>
+      <div class="card-ref">BGR-85</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-85" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-85" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-85" 
+                 data-img="https://live.staticflickr.com/65535/54550123454_571b6443bd_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-85">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550123554_49a397d00c_c.jpg" alt="Brincos Grandes em Semijoia - BGR-86" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-86</div>
+      <div class="card-ref">BGR-86</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-86" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-86" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-86" 
+                 data-img="https://live.staticflickr.com/65535/54550123554_49a397d00c_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-86">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550177553_506d4a84a1_c.jpg" alt="Brincos Grandes em Semijoia - BGR-87" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-87</div>
+      <div class="card-ref">BGR-87</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-87" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-87" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-87" 
+                 data-img="https://live.staticflickr.com/65535/54550177553_506d4a84a1_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-87">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549944446_7781a74b3d_c.jpg" alt="Brincos Grandes em Semijoia - BGR-88" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-88</div>
+      <div class="card-ref">BGR-88</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-88" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-88" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-88" 
+                 data-img="https://live.staticflickr.com/65535/54549944446_7781a74b3d_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-88">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550123864_7833098c00_c.jpg" alt="Brincos Grandes em Semijoia - BGR-89" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-89</div>
+      <div class="card-ref">BGR-89</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-89" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-89" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-89" 
+                 data-img="https://live.staticflickr.com/65535/54550123864_7833098c00_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-89">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550283620_95045b9a2b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-90" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-90</div>
+      <div class="card-ref">BGR-90</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-90" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-90" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-90" 
+                 data-img="https://live.staticflickr.com/65535/54550283620_95045b9a2b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-90">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549065412_15a78a3ef4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-91" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-91</div>
+      <div class="card-ref">BGR-91</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-91" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-91" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-91" 
+                 data-img="https://live.staticflickr.com/65535/54549065412_15a78a3ef4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-91">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550124179_27bc2e1cf4_c.jpg" alt="Brincos Grandes em Semijoia - BGR-92" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-92</div>
+      <div class="card-ref">BGR-92</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-92" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-92" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-92" 
+                 data-img="https://live.staticflickr.com/65535/54550124179_27bc2e1cf4_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-92">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550178208_a741ceb12b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-93" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-93</div>
+      <div class="card-ref">BGR-93</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-93" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-93" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-93" 
+                 data-img="https://live.staticflickr.com/65535/54550178208_a741ceb12b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-93">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549945041_84a76de80e_c.jpg" alt="Brincos Grandes em Semijoia - BGR-94" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-94</div>
+      <div class="card-ref">BGR-94</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-94" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-94" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-94" 
+                 data-img="https://live.staticflickr.com/65535/54549945041_84a76de80e_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-94">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549945171_e0d7de21e7_c.jpg" alt="Brincos Grandes em Semijoia - BGR-95" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-95</div>
+      <div class="card-ref">BGR-95</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-95" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-95" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-95" 
+                 data-img="https://live.staticflickr.com/65535/54549945171_e0d7de21e7_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-95">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549065892_f60083ff0b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-96" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-96</div>
+      <div class="card-ref">BGR-96</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-96" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-96" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-96" 
+                 data-img="https://live.staticflickr.com/65535/54549065892_f60083ff0b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-96">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550178738_7b3306d12b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-97" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-97</div>
+      <div class="card-ref">BGR-97</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-97" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-97" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-97" 
+                 data-img="https://live.staticflickr.com/65535/54550178738_7b3306d12b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-97">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549066132_29a388e83b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-98" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-98</div>
+      <div class="card-ref">BGR-98</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-98" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-98" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-98" 
+                 data-img="https://live.staticflickr.com/65535/54549066132_29a388e83b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-98">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550284455_9d1beb407b_c.jpg" alt="Brincos Grandes em Semijoia - BGR-99" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-99</div>
+      <div class="card-ref">BGR-99</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-99" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-99" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-99" 
+                 data-img="https://live.staticflickr.com/65535/54550284455_9d1beb407b_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-99">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549066382_878f80a172_c.jpg" alt="Brincos Grandes em Semijoia - BGR-100" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-100</div>
+      <div class="card-ref">BGR-100</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-100" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-100" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-100" 
+                 data-img="https://live.staticflickr.com/65535/54549066382_878f80a172_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-100">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550179168_40ac0a3105_c.jpg" alt="Brincos Grandes em Semijoia - BGR-101" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-101</div>
+      <div class="card-ref">BGR-101</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-101" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-101" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-101" 
+                 data-img="https://live.staticflickr.com/65535/54550179168_40ac0a3105_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-101">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550125204_80f973e6d6_c.jpg" alt="Brincos Grandes em Semijoia - BGR-102" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Brincos Grandes em Semijoia - BGR-102</div>
+      <div class="card-ref">BGR-102</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_BGR-102" type="text" class="counter-value" value="0" 
+                 data-ref="BGR-102" 
+                 data-desc="Brincos Grandes em Semijoia - BGR-102" 
+                 data-img="https://live.staticflickr.com/65535/54550125204_80f973e6d6_c.jpg"
+                 aria-label="Quantidade para Brincos Grandes em Semijoia - BGR-102">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'brincos_grandes';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo_catalogo }}{% endblock %}
+
+{% block extra_css %}{% endblock %}
+
+{% block content %}
+<main>
+  <div class="titulo-catalogo">{{ titulo_catalogo }}</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    {% for produto in produtos %}
+    <div class="card">
+      <img src="{{ produto.img_url }}" alt="{{ produto.desc }}" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">{{ produto.desc }}</div>
+      <div class="card-ref">{{ produto.cod }}</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_{{ produto.cod }}" type="text" class="counter-value" value="0" 
+                 data-ref="{{ produto.cod }}" 
+                 data-desc="{{ produto.desc }}" 
+                 data-img="{{ produto.img_url }}"
+                 aria-label="Quantidade para {{ produto.desc }}">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script>
+    const NOME_CATALOGO_ATUAL = '{{ nome_cat }}';
+  </script>
+  <script src="{{ profundidade_relativa }}script_catalogo.js" defer></script>
+{% endblock %}

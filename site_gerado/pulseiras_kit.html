@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Pulseiras Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Catálogos de semijoias folheadas a ouro para revenda. Confira os modelos, escolha as quantidades e envie seu pedido pelo WhatsApp.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilo_global.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="estilo_header.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="estilo_global.css">
+    <link rel="stylesheet" href="estilo_header.css">
+  </noscript>
+  
+  
+
+</head>
+<body>
+
+  <header class="topo-menu">
+    <div class="linha-top">
+      <button class="hamburger-btn" id="abrirMenu" aria-label="Abrir menu"><span class="hamburger-icon"><span></span><span></span><span></span></span></button>
+      
+      <div class="grupo-menu-central">
+        <a href="index.html" class="menu-item inicio"><span class="material-icons menu-icon">home</span><span class="menu-text">INÍCIO</span></a>
+        
+        <button class="menu-item produtos" id="abrirMenuProdutos">
+          <span class="material-icons menu-icon">view_list</span>
+          <span class="menu-text">PRODUTOS</span>
+        </button>
+        
+        <a href="carrinho.html" class="menu-item carrinho"><span class="material-icons menu-icon">shopping_cart</span><span class="carrinho-num" id="carrinhoNum">0</span><span class="menu-text">CARRINHO</span></a>
+        
+        <div class="menu-item login" id="loginAreaHeader">
+            <a href="login.html" class="login-greeting">
+                <span class="material-icons menu-icon">account_circle</span>
+                <span class="menu-text">Login</span>
+            </a>
+        </div>
+        </div>
+
+      <span class="material-icons buscar-icone" id="abrirLupa">search</span>
+    </div>
+  </header>
+  
+  <div class="modal-lupa-bg" id="modalLupaBg">
+      <div class="modal-lupa-box">
+          <button class="modal-lupa-fechar" id="fecharLupa" title="Fechar busca"><span class="material-icons">close</span></button>
+          <div class="modal-lupa-label">BUSCAR PRODUTO</div>
+          <div class="modal-lupa-input-area">
+              <input type="text" id="modalLupaInput" class="modal-lupa-input" placeholder="Digite o nome da categoria..." autocomplete="off">
+              <button id="modalLupaBuscar" class="modal-lupa-buscar">BUSCAR</button>
+          </div>
+          <div id="searchResultsContainer" class="search-results-container"></div>
+      </div>
+  </div>
+  
+  <nav class="menu-lateral" id="menuLateral">
+    <div class="menu-top">
+        <span class="login-area">
+        </span>
+        <button class="close-btn" id="fecharMenu" aria-label="Fechar menu"><span class="material-icons">close</span></button>
+    </div>
+    <ul class="menu-list">
+      
+        <li>
+          <div class="menu-item-av" data-menu="braceletes">BRACELETES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="braceletes">
+            <li class="submenu-titulo">Ver tudo em BRACELETES</li>
+            
+              <li><a href="braceletes.html" class="submenu-link">Braceletes</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="brincos">BRINCOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="brincos">
+            <li class="submenu-titulo">Ver tudo em BRINCOS</li>
+            
+              <li><a href="brincos_argolas.html" class="submenu-link">Argolas</a></li>
+            
+              <li><a href="brincos_argolas_fio.html" class="submenu-link">Argolas de Fio</a></li>
+            
+              <li><a href="brincos_cartilagem.html" class="submenu-link">Cartilagem</a></li>
+            
+              <li><a href="brincos_grandes.html" class="submenu-link">Grandes</a></li>
+            
+              <li><a href="brincos_max.html" class="submenu-link">Max</a></li>
+            
+              <li><a href="brincos_medios.html" class="submenu-link">Médios</a></li>
+            
+              <li><a href="brincos_pequenos.html" class="submenu-link">Pequenos</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="colares">COLARES<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="colares">
+            <li class="submenu-titulo">Ver tudo em COLARES</li>
+            
+              <li><a href="colares_choker.html" class="submenu-link">Choker</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="conjuntos">CONJUNTOS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="conjuntos">
+            <li class="submenu-titulo">Ver tudo em CONJUNTOS</li>
+            
+              <li><a href="conjuntos_delicados.html" class="submenu-link">Delicados</a></li>
+            
+              <li><a href="conjuntos_zirconias.html" class="submenu-link">Zircônias</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="pulseiras">PULSEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="pulseiras">
+            <li class="submenu-titulo">Ver tudo em PULSEIRAS</li>
+            
+              <li><a href="pulseiras_kit.html" class="submenu-link">Kit Pulseiras</a></li>
+            
+              <li><a href="pulseiras_masculinas.html" class="submenu-link">Masculinas</a></li>
+            
+          </ul>
+        </li>
+      
+        <li>
+          <div class="menu-item-av" data-menu="tornozeleiras">TORNOZELEIRAS<span class="material-icons">expand_more</span></div>
+          <ul class="submenu" data-submenu="tornozeleiras">
+            <li class="submenu-titulo">Ver tudo em TORNOZELEIRAS</li>
+            
+              <li><a href="tornozeleiras_kit.html" class="submenu-link">Kit Tornozeleiras</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <div class="page-wrapper">
+    
+<main>
+  <div class="titulo-catalogo">Pulseiras Kit</div>
+  <section class="catalogo-grid" id="catalogoGrid">
+    
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550313285_db1a36205f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-01" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-01</div>
+      <div class="card-ref">KPL-01</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-01" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-01" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-01" 
+                 data-img="https://live.staticflickr.com/65535/54550313285_db1a36205f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-01">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550154459_279135414f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-02" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-02</div>
+      <div class="card-ref">KPL-02</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-02" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-02" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-02" 
+                 data-img="https://live.staticflickr.com/65535/54550154459_279135414f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-02">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550313620_60dbace486_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-03" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-03</div>
+      <div class="card-ref">KPL-03</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-03" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-03" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-03" 
+                 data-img="https://live.staticflickr.com/65535/54550313620_60dbace486_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-03">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549096277_e592a4b75f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-04" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-04</div>
+      <div class="card-ref">KPL-04</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-04" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-04" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-04" 
+                 data-img="https://live.staticflickr.com/65535/54549096277_e592a4b75f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-04">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549975421_e53d5c2e23_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-05" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-05</div>
+      <div class="card-ref">KPL-05</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-05" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-05" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-05" 
+                 data-img="https://live.staticflickr.com/65535/54549975421_e53d5c2e23_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-05">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550208803_0d581078fd_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-06" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-06</div>
+      <div class="card-ref">KPL-06</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-06" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-06" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-06" 
+                 data-img="https://live.staticflickr.com/65535/54550208803_0d581078fd_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-06">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550208908_ccf94a8bc9_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-07" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-07</div>
+      <div class="card-ref">KPL-07</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-07" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-07" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-07" 
+                 data-img="https://live.staticflickr.com/65535/54550208908_ccf94a8bc9_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-07">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549975781_fd90fe5bcc_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-08" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-08</div>
+      <div class="card-ref">KPL-08</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-08" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-08" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-08" 
+                 data-img="https://live.staticflickr.com/65535/54549975781_fd90fe5bcc_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-08">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550314410_621c39e8fa_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-09" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-09</div>
+      <div class="card-ref">KPL-09</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-09" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-09" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-09" 
+                 data-img="https://live.staticflickr.com/65535/54550314410_621c39e8fa_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-09">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549976046_0230320f5f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-10" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-10</div>
+      <div class="card-ref">KPL-10</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-10" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-10" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-10" 
+                 data-img="https://live.staticflickr.com/65535/54549976046_0230320f5f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-10">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550209463_21a1f3594c_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-11" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-11</div>
+      <div class="card-ref">KPL-11</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-11" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-11" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-11" 
+                 data-img="https://live.staticflickr.com/65535/54550209463_21a1f3594c_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-11">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550314845_61fb18a5a2_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-12" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-12</div>
+      <div class="card-ref">KPL-12</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-12" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-12" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-12" 
+                 data-img="https://live.staticflickr.com/65535/54550314845_61fb18a5a2_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-12">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550314965_b13e1f1ec3_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-13" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-13</div>
+      <div class="card-ref">KPL-13</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-13" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-13" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-13" 
+                 data-img="https://live.staticflickr.com/65535/54550314965_b13e1f1ec3_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-13">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549976601_05fcfd59d1_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-14" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-14</div>
+      <div class="card-ref">KPL-14</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-14" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-14" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-14" 
+                 data-img="https://live.staticflickr.com/65535/54549976601_05fcfd59d1_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-14">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549097657_81b847713e_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-15" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-15</div>
+      <div class="card-ref">KPL-15</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-15" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-15" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-15" 
+                 data-img="https://live.staticflickr.com/65535/54549097657_81b847713e_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-15">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550156149_bdf5712d64_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-16" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-16</div>
+      <div class="card-ref">KPL-16</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-16" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-16" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-16" 
+                 data-img="https://live.staticflickr.com/65535/54550156149_bdf5712d64_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-16">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549976961_25236d6339_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-17" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-17</div>
+      <div class="card-ref">KPL-17</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-17" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-17" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-17" 
+                 data-img="https://live.staticflickr.com/65535/54549976961_25236d6339_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-17">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549097957_21df328399_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-18" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-18</div>
+      <div class="card-ref">KPL-18</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-18" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-18" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-18" 
+                 data-img="https://live.staticflickr.com/65535/54549097957_21df328399_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-18">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550210343_c36d121b97_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-19" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-19</div>
+      <div class="card-ref">KPL-19</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-19" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-19" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-19" 
+                 data-img="https://live.staticflickr.com/65535/54550210343_c36d121b97_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-19">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549977301_37f088b20a_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-20" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-20</div>
+      <div class="card-ref">KPL-20</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-20" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-20" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-20" 
+                 data-img="https://live.staticflickr.com/65535/54549977301_37f088b20a_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-20">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550210553_0e392f21a7_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-21" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-21</div>
+      <div class="card-ref">KPL-21</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-21" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-21" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-21" 
+                 data-img="https://live.staticflickr.com/65535/54550210553_0e392f21a7_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-21">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549098372_dcea15bfd7_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-22" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-22</div>
+      <div class="card-ref">KPL-22</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-22" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-22" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-22" 
+                 data-img="https://live.staticflickr.com/65535/54549098372_dcea15bfd7_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-22">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549098452_a07c2923c4_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-23" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-23</div>
+      <div class="card-ref">KPL-23</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-23" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-23" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-23" 
+                 data-img="https://live.staticflickr.com/65535/54549098452_a07c2923c4_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-23">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550316110_6b647cb3da_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-24" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-24</div>
+      <div class="card-ref">KPL-24</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-24" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-24" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-24" 
+                 data-img="https://live.staticflickr.com/65535/54550316110_6b647cb3da_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-24">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550316210_853056384e_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-25" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-25</div>
+      <div class="card-ref">KPL-25</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-25" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-25" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-25" 
+                 data-img="https://live.staticflickr.com/65535/54550316210_853056384e_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-25">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550316340_8c77c996bc_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-26" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-26</div>
+      <div class="card-ref">KPL-26</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-26" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-26" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-26" 
+                 data-img="https://live.staticflickr.com/65535/54550316340_8c77c996bc_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-26">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549098882_0236985ed3_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-27" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-27</div>
+      <div class="card-ref">KPL-27</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-27" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-27" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-27" 
+                 data-img="https://live.staticflickr.com/65535/54549098882_0236985ed3_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-27">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549978231_290db1e20a_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-28" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-28</div>
+      <div class="card-ref">KPL-28</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-28" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-28" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-28" 
+                 data-img="https://live.staticflickr.com/65535/54549978231_290db1e20a_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-28">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549978341_07b60e7209_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-29" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-29</div>
+      <div class="card-ref">KPL-29</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-29" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-29" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-29" 
+                 data-img="https://live.staticflickr.com/65535/54549978341_07b60e7209_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-29">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550211503_4a3d51185f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-30" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-30</div>
+      <div class="card-ref">KPL-30</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-30" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-30" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-30" 
+                 data-img="https://live.staticflickr.com/65535/54550211503_4a3d51185f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-30">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550157724_24dfc3aa6f_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-31" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-31</div>
+      <div class="card-ref">KPL-31</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-31" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-31" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-31" 
+                 data-img="https://live.staticflickr.com/65535/54550157724_24dfc3aa6f_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-31">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550211688_02e30c4118_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-32" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-32</div>
+      <div class="card-ref">KPL-32</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-32" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-32" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-32" 
+                 data-img="https://live.staticflickr.com/65535/54550211688_02e30c4118_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-32">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550157984_749e64efaf_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-33" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-33</div>
+      <div class="card-ref">KPL-33</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-33" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-33" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-33" 
+                 data-img="https://live.staticflickr.com/65535/54550157984_749e64efaf_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-33">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550158124_0a052d2345_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-34" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-34</div>
+      <div class="card-ref">KPL-34</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-34" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-34" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-34" 
+                 data-img="https://live.staticflickr.com/65535/54550158124_0a052d2345_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-34">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550158214_5712c05671_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-35" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-35</div>
+      <div class="card-ref">KPL-35</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-35" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-35" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-35" 
+                 data-img="https://live.staticflickr.com/65535/54550158214_5712c05671_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-35">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549978921_201ab4a01c_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-36" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-36</div>
+      <div class="card-ref">KPL-36</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-36" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-36" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-36" 
+                 data-img="https://live.staticflickr.com/65535/54549978921_201ab4a01c_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-36">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549099837_fd5b3cbfc7_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-37" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-37</div>
+      <div class="card-ref">KPL-37</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-37" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-37" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-37" 
+                 data-img="https://live.staticflickr.com/65535/54549099837_fd5b3cbfc7_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-37">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549099952_c11f1bfdeb_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-38" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-38</div>
+      <div class="card-ref">KPL-38</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-38" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-38" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-38" 
+                 data-img="https://live.staticflickr.com/65535/54549099952_c11f1bfdeb_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-38">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550317655_acd57efccf_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-39" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-39</div>
+      <div class="card-ref">KPL-39</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-39" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-39" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-39" 
+                 data-img="https://live.staticflickr.com/65535/54550317655_acd57efccf_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-39">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550317730_8f34907446_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-40" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-40</div>
+      <div class="card-ref">KPL-40</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-40" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-40" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-40" 
+                 data-img="https://live.staticflickr.com/65535/54550317730_8f34907446_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-40">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550158929_8eb4992ff0_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-41" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-41</div>
+      <div class="card-ref">KPL-41</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-41" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-41" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-41" 
+                 data-img="https://live.staticflickr.com/65535/54550158929_8eb4992ff0_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-41">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549100322_950bce3c2d_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-42" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-42</div>
+      <div class="card-ref">KPL-42</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-42" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-42" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-42" 
+                 data-img="https://live.staticflickr.com/65535/54549100322_950bce3c2d_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-42">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550318065_de21806f93_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-43" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-43</div>
+      <div class="card-ref">KPL-43</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-43" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-43" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-43" 
+                 data-img="https://live.staticflickr.com/65535/54550318065_de21806f93_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-43">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550212993_ccc461d615_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-44" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-44</div>
+      <div class="card-ref">KPL-44</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-44" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-44" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-44" 
+                 data-img="https://live.staticflickr.com/65535/54550212993_ccc461d615_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-44">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549980081_0eeaf10e1d_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-45" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-45</div>
+      <div class="card-ref">KPL-45</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-45" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-45" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-45" 
+                 data-img="https://live.staticflickr.com/65535/54549980081_0eeaf10e1d_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-45">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550159529_73eb656084_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-46" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-46</div>
+      <div class="card-ref">KPL-46</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-46" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-46" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-46" 
+                 data-img="https://live.staticflickr.com/65535/54550159529_73eb656084_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-46">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550318565_01076a1895_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-47" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-47</div>
+      <div class="card-ref">KPL-47</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-47" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-47" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-47" 
+                 data-img="https://live.staticflickr.com/65535/54550318565_01076a1895_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-47">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550318650_9d2433b95a_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-48" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-48</div>
+      <div class="card-ref">KPL-48</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-48" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-48" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-48" 
+                 data-img="https://live.staticflickr.com/65535/54550318650_9d2433b95a_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-48">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550213533_1dc506bf91_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-49" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-49</div>
+      <div class="card-ref">KPL-49</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-49" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-49" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-49" 
+                 data-img="https://live.staticflickr.com/65535/54550213533_1dc506bf91_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-49">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550318860_b0127a1054_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-50" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-50</div>
+      <div class="card-ref">KPL-50</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-50" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-50" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-50" 
+                 data-img="https://live.staticflickr.com/65535/54550318860_b0127a1054_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-50">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550318950_db801f8b61_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-51" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-51</div>
+      <div class="card-ref">KPL-51</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-51" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-51" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-51" 
+                 data-img="https://live.staticflickr.com/65535/54550318950_db801f8b61_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-51">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549101342_0be986a925_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-52" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-52</div>
+      <div class="card-ref">KPL-52</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-52" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-52" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-52" 
+                 data-img="https://live.staticflickr.com/65535/54549101342_0be986a925_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-52">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549101407_9f1a334eb9_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-53" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-53</div>
+      <div class="card-ref">KPL-53</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-53" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-53" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-53" 
+                 data-img="https://live.staticflickr.com/65535/54549101407_9f1a334eb9_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-53">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54549101502_5039146a52_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-54" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-54</div>
+      <div class="card-ref">KPL-54</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-54" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-54" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-54" 
+                 data-img="https://live.staticflickr.com/65535/54549101502_5039146a52_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-54">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550160424_32157707ee_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-55" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-55</div>
+      <div class="card-ref">KPL-55</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-55" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-55" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-55" 
+                 data-img="https://live.staticflickr.com/65535/54550160424_32157707ee_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-55">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550214208_a6ea8a44c1_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-56" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-56</div>
+      <div class="card-ref">KPL-56</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-56" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-56" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-56" 
+                 data-img="https://live.staticflickr.com/65535/54550214208_a6ea8a44c1_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-56">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550160579_2e9af31471_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-57" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-57</div>
+      <div class="card-ref">KPL-57</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-57" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-57" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-57" 
+                 data-img="https://live.staticflickr.com/65535/54550160579_2e9af31471_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-57">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550160664_7592e5c876_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-58" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-58</div>
+      <div class="card-ref">KPL-58</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-58" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-58" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-58" 
+                 data-img="https://live.staticflickr.com/65535/54550160664_7592e5c876_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-58">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="https://live.staticflickr.com/65535/54550160769_67695eab6d_c.jpg" alt="Pulseiras - Kit c/ 3unid em Semijoia - KPL-59" class="card-img" loading="lazy" decoding="async">
+      <div class="card-desc">Pulseiras - Kit c/ 3unid em Semijoia - KPL-59</div>
+      <div class="card-ref">KPL-59</div>
+      <div class="counter-outer">
+        <div class="counter-group">
+          <button class="counter-btn" data-delta="-1" tabindex="-1" aria-label="Diminuir quantidade">–</button>
+          <input id="qtd_KPL-59" type="text" class="counter-value" value="0" 
+                 data-ref="KPL-59" 
+                 data-desc="Pulseiras - Kit c/ 3unid em Semijoia - KPL-59" 
+                 data-img="https://live.staticflickr.com/65535/54550160769_67695eab6d_c.jpg"
+                 aria-label="Quantidade para Pulseiras - Kit c/ 3unid em Semijoia - KPL-59">
+          <button class="counter-btn" data-delta="1" tabindex="-1" aria-label="Aumentar quantidade">+</button>
+        </div>
+      </div>
+    </div>
+    
+    </section>
+  <div class="total-pecas-box">
+    <span class="total-pecas-info" id="totalPecas">TOTAL = 0 unid.</span>
+  </div>
+  
+  <button id="revisarPedido" class="botao-padrao botao-whatsapp botao-piscando">Adicionar Pedido</button>
+  
+  <footer>
+    <span class="rodape-linha">SEMIJOIAS QUE VENDEM O ANO TODO!</span>
+  </footer>
+
+  <div class="img-modal-bg" id="imgModalBg">
+    <div class="img-modal-content" id="imgModalContent">
+      <button class="img-modal-close" id="imgModalClose">&times;</button>
+      <img src="" alt="" id="imgModalImg">
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <button id="voltarAoTopoBtn" class="voltar-ao-topo" title="Voltar ao topo">
+    <span class="material-icons">arrow_upward</span>
+  </button>
+  
+  <div id="infoModal" class="info-modal-bg">
+    <div class="info-modal-content">
+      <button id="infoModalClose" class="info-modal-close" title="Fechar">×</button>
+      <p id="infoModalText"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+  <script src="script_header.js" defer></script>
+
+  
+  <script>
+    const NOME_CATALOGO_ATUAL = 'pulseiras_kit';
+  </script>
+  <script src="script_catalogo.js" defer></script>
+
+
+</body>
+</html>
